@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RBjorn Portfolio Website</title>
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="icon" type="image/x-icon" href="Images/logo.png">
+        <!-- codepen head -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500&family=Raleway:wght@100;200;300;400;500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+        <!-- Header -->
+        <link rel="stylesheet" href="CSS/Header/header.css">
+        <!-- Main Intro -->
+        <link rel="stylesheet" href="CSS/Home/main-intro.css">
+        <!-- Landscape -->
+        <link rel="stylesheet" href="CSS/Sunrise/sunrise.css">`
+        <!-- Snowy Background -->
+        <link rel="stylesheet" href="CSS/Snow/snow.css">
+        <!-- Project -->
+        <link rel="stylesheet" href="CSS/Projects/project.css">
+        <!-- Skills -->
+        <link rel="stylesheet" href="CSS/Skills/skills.css">
+        <!-- Magic Card -->
+        <link rel="stylesheet" href="CSS/Magic-Card/magic-card.css">
+        <!-- Footer -->
+        <link rel="stylesheet" href="CSS/Footer/footer.css">
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!-- Fake Terminal -->
+        <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
+        <!-- About me -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+        <style>
+            .margin{
+                margin:0;
+                height: 700px;
+                /* background-color: white; */
+            }
+            .sticky {
+                /* transition: all 0.4s; */
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 1000;
+            }
+            .hide{
+                display: none;
+            }
+            
+        </style>
+    </head>
+    <body id="top">
+        <!-- <div ></div> -->
+                    
+        <!-- Main Content  -->
+        <main id="main">
+            <!-- Header -->
+            <header class="header sticky" id="myHeader">
+                <h1 class="logo"><a href="#"><img src="Images/logo.png" alt="RBjorn's Logo" width="100px"></a></h1>
+
+                <nav id="nav-1">
+                    <ul class="main-nav">
+                        <!-- <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li> -->
+                        <li><a class="link-1" onclick="scrollto('#home'); return false; " ; href="#">Home</a></li>
+                        <li><a class="link-1" onclick="scrollto('#console'); return false; "href="#console">Console</a></li>
+                        <li><a class="link-1" onclick="scrollto('#projects'); return false; "href="#projects">Projects</a></li>
+                        <li><a class="link-1" onclick="scrollto('#about'); return false; "href="#about">About</a></li>
+                        <li><a class="link-1" onclick="scrollto('#resume'); return false; "href="#resume">Resume</a></li>
+                        <li><a class="link-1" onclick="scrollto('#contact'); return false; "href="#contact">Contact</a></li>
+                    </ul> 
+                </nav>            
+            </header> 
+            <!-- Main Intro -->
+            <section class="home" id="home">
+                <div class="home__intro">
+                    <h1>RAVI TRIVEDI</h1>
+                    <h3 class="span loader">
+                    <span class='m'>W</span>
+                    <span class='m'>E</span>
+                    <span class='m'>B</span>
+                    <span class='m'>&nbsp;</span>
+                    <span class='m'>/</span>
+                    <span class='m'>&nbsp;</span>
+                    <span class='m'>G</span>
+                    <span class='m'>A</span>
+                    <span class='m'>M</span>
+                    <span class='m'>E</span>
+                    <span class='m'>&nbsp;</span>
+                    <span class='m'>D</span>
+                    <span class='m'>E</span>
+                    <span class='m'>V</span>
+                    <span class='m'>E</span>
+                    <span class='m'>L</span>
+                    <span class='m'>O</span>
+                    <span class='m'>P</span>
+                    <span class='m'>E</span>
+                    <span class='m'>R</span>
+                    <span class='m'>&nbsp;</span>
+                    </h3>
+                </div>
+                <!-- Background -->
+                <canvas class="background"></canvas>
+                <!-- Landscape background -->
+                <div class="landscape" id="landscape__background">
+                    <div class="mountain"></div>
+                    <div class="mountain mountain-2"></div>
+                    <div class="mountain mountain-3"></div>
+                    <div class="sun-container sun-container-1">
+                    </div>
+                    <div class="sun-container">
+                    <div class="sun"></div>
+                    </div>
+                    <div class="cloud"></div>
+                    <div class="cloud cloud-1"></div>
+                    <div class="sun-container sun-container-reflection">
+                    <div class="sun"></div>
+                    </div>
+                    <div class="light"></div>
+                    <div class="light light-1"></div>
+                    <div class="light light-2"></div>
+                    <div class="light light-3"></div>
+                    <div class="light light-4"></div>
+                    <div class="light light-5"></div>
+                    <div class="light light-6"></div>
+                    <div class="light light-7"></div>
+                    <div class="water"></div>
+                    <div class="splash"></div>
+                    <div class="splash delay-1"></div>
+                    <div class="splash delay-2"></div>
+                    <div class="splash splash-4 delay-2"></div>
+                    <div class="splash splash-4 delay-3"></div>
+                    <div class="splash splash-4 delay-4"></div>
+                    <div class="splash splash-stone delay-3"></div>
+                    <div class="splash splash-stone splash-4"></div>
+                    <div class="splash splash-stone splash-5"></div>
+                    <div class="lotus lotus-1"></div>
+                    <div class="lotus lotus-2"></div>
+                    <div class="lotus lotus-3"></div>
+                    <div class="front">
+                    <div class="stone"></div>
+                    <div class="grass"></div>
+                    <div class="grass grass-1"></div>
+                    <div class="grass grass-2"></div>
+                    <div class="reed"></div>
+                    <div class="reed reed-1"></div>
+                    </div>
+                </div>
+                <!-- Snow Backgruond -->
+                <div class="snowy__background" id="snowy__background">
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                </div>
+            </section><!-- End Main Intro Section -->
+            <!-- Console -->
+            <section id="console" class="console">
+                <div class="container">
+                    <div class="section-title" style="padding:2rem 0" data-aos="fade-up">
+                        <h2>
+                            $ whoami
+                        </h2>
+                        <p>I'm <span class="typed" data-typed-items="Designer &#246;, Developer &#60; ? &#62;, Freelancer &#3647;, Gamer &#926;, Wizard &#8224;"></span></p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8" >
+                            <div class="terminal-window" id="console__window" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                                <header>
+                                <div class="button green" onclick="minimize();"></div>
+                                <div class="button yellow" onclick="maximize();"></div>
+                                <div class="button red" onclick="close();"></div>
+                                </header>
+                                <section class="terminal" id="terminal">
+                                    <div class="fake__terminal" id="fake__terminal"></div>                                  
+                                </section>
+                            </div>
+                                
+                        </div>
+                        
+                        <div class="col-lg-4 try__functions" data-aos="fade-left" data-aos-offset="500" data-aos-easing="ease-in-sine">
+                            <div class="row">
+                                <h3>$ commands </h3>
+                            </div>
+                            <div class="row">
+                                <div style="text-align: left;">
+                                    <ul>
+                                        <li><p>> whoami</p></li>
+                                        <li><p>> man ravi</p></li>
+                                        <li><p>> ls *.experience</p></li>                                        
+                                        <li><p>> ls *.projects</p></li>
+                                        <li><p>> ls *.skills</p></li>
+                                        <li><p>> cd 'MENU_ITEM'</p></li>
+                                        <li><p>> rm 'MENU_ITEM'</p></li>
+                                        <li><p>> history</p></li>
+                                        <li><p>> grep 'search-on-website'</p></li>
+                                        <li><p>> clear</p></li>
+                                        <li><p>> quit</p></li>
+                                    </ul>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                    <!-- <br/><br/><br/> -->
+                    <div class="hide" id="knowLinux">
+                        <p><br/><br/>See! You know how to use <span style="background-color: rgba(135,135,135,0.3); padding:5px; border-radius: 5px;">Linux</span><br>Just like me!</p>
+                    </div>
+                    <script>
+                        $('.fake__terminal').terminal({
+                            whoami: function(){
+                                this.echo(" _____             _   _______   _               _ _ \n" +
+                "|  __ &#92;           (_) |__   __| (_)             | (_)\n" +
+                "| |__) |__ ___   ___     | |_ __ ___   _____  __| |_ \n" +
+                "|  _  // _` &#92; &#92; / / |    | | '__| &#92; &#92; / / _ &#92;/ _` | |\n" +
+                "| | &#92; &#92; (_| |&#92; V /| |    | | |  | |&#92; V /  __/ (_| | |\n" +
+                "|_|  &#92;_&#92;__,_| &#92;_/ |_|    |_|_|  |_| &#92;_/ &#92;___|&#92;__,_|_|\n" );
+                
+                                this.echo("[[gb;green;rgba(245, 245, 245, 0.2)]Summary : ] Honoured by Dean and Lead by " +
+                                "Experts specializing in Web Development.   Experienced with all stages of development cycle for " +
+                                "dynamic web projects. Wellversed in JavaScript, React, Html/css, php, WordPress, Bootstrap and GitHub." +
+                                "Strong background in management and leadership.\n");
+                                this.echo("For more info: [[b;#03dac6;] man ravi ] \n");
+                                document.getElementById("knowLinux").classList.remove("hide")
+                            },
+                
+                            man: function(what) {
+                                if(what == "ravi"){
+                                    this.echo("")
+                                    this.echo("[[gb;green;rgba(245, 245, 245, 0.2)]Education : ]--------------------------------------------------------------------\nBachelor of Science - Major in Computer Science\nUniversity of Windsor\n&#10714; Sept 2019 - Present                 &#9765; Ontario, CA\n");
+                                    this.echo("[[gb;green;rgba(245, 245, 245, 0.2)]Experience : ]--------------------------------------------------------------------\n- Freelance Web Developer Intern\n  Novavet Pharma\n\n- Front-end Developer Intern\n  Crew’s Closet\n\nFor more info: [[b;#03dac6;] ls *.experience ] \n");
+                                    this.echo("[[gb;green;rgba(245, 245, 245, 0.2)]Projects : ]--------------------------------------------------------------------\n" +
+                                    "\n[[gb;green;rgba(245, 245, 245, 0.1)]Game Project : ]\n- Arena Royal\n- Feed the Animals\n- Snake Game\n...\n\n" + 
+                                    "[[gb;green;rgba(245, 245, 245, 0.1)]Web Dev : ]\n- Filter Fun\n- Calculator\n- To-do List\n... \n\n" + 
+                                    "[[gb;green;rgba(245, 245, 245, 0.1)]Software Dev : ]\n- Store Inventory System\n- Flight Tracking System\n\n" + 
+                                    "For more info: [[b;#03dac6;] ls *.projects ] \n");
+                                    this.echo("[[gb;green;rgba(245, 245, 245, 0.2)]Skills : ]--------------------------------------------------------------------\n- User experience (UX)/ User interface (UI) Design\n- Vision Control / Git\n- Web Development\n...\n\n" +
+                                    "For more info: [[b;#03dac6;] ls *.skills    ] \n");
+                                    this.echo("[[gb;green;rgba(245, 245, 245, 0.2)]Awards : ]--------------------------------------------------------------------\n- &#8886; Dean's Honour List(2020-2021)\n- &#9812; 1st at Chess Competition\n");
+                                }else{
+                                    this.echo('[[gb;red;]Who is this unknown person >] ' + what + "\n"); 
+                                }
+                                document.getElementById("knowLinux").classList.remove("hide")
+                            } ,
+                
+                            ls: function(which){
+                                // Experience
+                                if(which == "*.experience"){
+                                    this.echo("[[gb;green;rgba(245, 245, 245, 0.2)]Experience : ]-----------------------------------------------------------------------------------\n[[b;green;rgba(245, 245, 245, 0.1)]Freelance Web Developer Intern ]\n[[b;green;]Novavet Pharma]\n" +
+                                    "&#10714; May 2021 - August 2021                 &#9765; Gujarat, India / Remote\n" +
+                                    "- Collaborated with UI and UX personnel to develop friendly and interactive websites that ensures high customer traffic, page views and user experience which resulted in a 42% increase in sales revenue. \n" +
+                                    "- Designed company logo using Adobe Illustrator to strengthen company brand and identity. \n" +
+                                    "- Implemented a server that expedited document generation and searches functionality by 20%.\n" +
+                                    "- Developed, coded, installed, tested, debugged and documented web applications using HTML5, CSS, React and JavaScript on Visual Studio Code. \n");
+                                    this.echo("[[b;green;rgba(245, 245, 245, 0.1)]Front-end Developer Intern ]\n[[b;green;]Crew’s Closet]\n" +
+                                    "&#10714; June 2020 - October 2020                 &#9765; Delhi, India / Remote\n" +
+                                    "- Created ecommerce websites on Shopify with a team of clients of a start up company which met requirements for objectives to reach maximum customers, increase sales and profitability of the business.\n" +
+                                    "- Analyzed known design shortcomings using wire-framing, diagramming and mapping to help team members visualize existing product limitations and evaluate proposed solutions.\n" +
+                                    "- Researched and developed new technology designs and Integrated several different APIs such as CashFree and Shyplite to framework.\n");
+                                }
+                                // All Project
+                                else if(which == "*.projects"){
+                                    this.echo("[[gb;green;rgba(245, 245, 245, 0.2)]Projects : ]-----------------------------------------------------------------------------------");
+                                    // game project
+                                    this.echo("[[b;green;rgba(245, 245, 245, 0.1)] Game  Project]");
+                                    this.echo("[[b;green;rgba(245, 245, 245, 0.1)] Meta Room]\n" +
+                                    "&#10714; June 2020\n" +
+                                    "- \n" +
+                                    "- \n" +
+                                    "- \n");
+                                    this.echo("[[b;green;rgba(245, 245, 245, 0.1)] The Hidden World]\n" +
+                                    "&#10714; June 2020\n" +
+                                    "- \n" +
+                                    "- \n" +
+                                    "- \n");
+                                    this.echo("[[b;green;rgba(245, 245, 245, 0.1)] Feed the Animals]\n" +
+                                    "&#10714; June 2020\n" +
+                                    "- \n" +
+                                    "- \n" +
+                                    "- \n");
+                                    this.echo("[[b;green;rgba(245, 245, 245, 0.1)] Maze Runner]\n" +
+                                    "&#10714; June 2020\n" +
+                                    "- \n" +
+                                    "- \n" +
+                                    "- \n");
+                                    this.echo("[[b;green;rgba(245, 245, 245, 0.1)] Rolling Ball]\n" +
+                                    "&#10714; June 2020\n" +
+                                    "- \n" +
+                                    "- \n" +
+                                    "- \n");
+                                    this.echo("[[b;green;rgba(245, 245, 245, 0.1)] Snake Game]\n" +
+                                    "&#10714; June 2020\n" +
+                                    "- \n" +
+                                    "- \n" +
+                                    "- \n");
+                                    
+                                    this.echo("[[b;green;rgba(245, 245, 245, 0.1)] Guessing Game]\n" +
+                                    "&#10714; June 2020\n" +
+                                    "- \n" +
+                                    "- \n" +
+                                    "- \n");
+                                    this.echo("[[b;green;rgba(245, 245, 245, 0.1)] Nine Gaps]\n" +
+                                    "&#10714; June 2020\n" +
+                                    "- \n" +
+                                    "- \n" +
+                                    "- \n");
+                                    this.echo("[[b;green;rgba(245, 245, 245, 0.1)] Tic-Tac-Toe]\n" +
+                                    "&#10714; June 2020\n" +
+                                    "- \n" +
+                                    "- \n" +
+                                    "- \n");
+                                    // web project
+                                    this.echo("[[b;green;rgba(245, 245, 245, 0.1)] Web Dev.]");
+                                    this.echo("[[b;green;rgba(245, 245, 245, 0.1)] To Do List]\n" +
+                                    "&#10714; June 2020\n" +
+                                    "- \n" +
+                                    "- \n" +
+                                    "- \n");
+                                    this.echo("[[b;green;rgba(245, 245, 245, 0.1)] Calculator]\n" +
+                                    "&#10714; June 2020\n" +
+                                    "- \n" +
+                                    "- \n" +
+                                    "- \n");
+                                    this.echo("[[b;green;rgba(245, 245, 245, 0.1)] Filter Fun]\n" +
+                                    "&#10714; June 2020\n" +
+                                    "- \n" +
+                                    "- \n" +
+                                    "- \n");
+                
+                                    // software dev
+                                    this.echo("[[b;green;rgba(245, 245, 245, 0.1)] Software Designs]")
+                                    this.echo("[[b;green;rgba(245, 245, 245, 0.1)] Store Inventory System]\n" +
+                                    "&#10714; June 2020\n" +
+                                    "- \n" +
+                                    "- \n" +
+                                    "- \n");
+                                    this.echo("[[b;green;rgba(245, 245, 245, 0.1)] Flight Tracking System]\n" +
+                                    "&#10714; June 2020\n" +
+                                    "- \n" +
+                                    "- \n" +
+                                    "- \n");
+                                    
+                                }
+                                // All Skills
+                                else if(which == "*.skills"){
+                                    this.echo("[[gb;green;rgba(245, 245, 245, 0.2)]Skills : ]-----------------------------------------------------------------------------------");
+                                    this.echo("[[b;green;rgba(245, 245, 245, 0.1)] Object Oriented Languages]\n\n" +
+                                    "   [[g;white;rgba(0, 255, 0, 0.5)] Python ] , " +
+                                    "[[g;white;rgba(0, 255, 0, 0.5)] Java ], " +
+                                    "[[g;white;rgba(0, 255, 0, 0.5)] C++ ] " + "\n");
+                                    this.echo("[[b;green;rgba(245, 245, 245, 0.1)] Web Development (Front-end / Back-end)]\n\n" +
+                                    "   [[g;white;rgba(0, 255, 0, 0.5)] HTML5 ] , " +
+                                    "[[g;white;rgba(0, 255, 0, 0.5)] CSS ], " +
+                                    "[[g;white;rgba(0, 255, 0, 0.5)] JavaScript ], " +
+                                    "[[g;white;rgba(0, 255, 0, 0.5)] React ], " +
+                                    "[[g;white;rgba(0, 255, 0, 0.5)] Perl ]");  
+                                    this.echo("[[b;green;rgba(245, 245, 245, 0.1)] Operating Systems)]\n\n" +
+                                    "   [[g;white;rgba(0, 255, 0, 0.5)] Windows ] , " +
+                                    "[[g;white;rgba(0, 255, 0, 0.5)] Linux ], " +
+                                    "[[g;white;rgba(0, 255, 0, 0.5)] Unix ]"); 
+                                    this.echo("[[b;green;rgba(245, 245, 245, 0.1)] Game Development (UI / Networking / Graphics))]\n\n" +
+                                    "   [[g;white;rgba(0, 255, 0, 0.5)] C# ] , " +
+                                    "[[g;white;rgba(0, 255, 0, 0.5)] Unity ], " +
+                                    "[[g;white;rgba(0, 255, 0, 0.5)] Blender ]\n"); 
+                                }
+                                else{
+                                    this.echo("[[gb;red;]unknown command >] " + "ls "+which);
+                                }
+                                document.getElementById("knowLinux").classList.remove("hide")
+                            }, 
+                
+                            // cd: function(where){
+                            //     if(where.toUpperCase() == "HOME"){
+                            //         var loc = document.getElementById("home");
+                            //         loc.scrollIntoView(true);
+                            //     }
+                            //     else if(where.toUpperCase() == "PROJECT"){
+                            //         scrollto("#projects");
+                            //         return false;
+                            //     }
+                            //     else if(where.toUpperCase() == "ABOUT"){
+                            //         scrollto("#about");
+                            //         return false;
+                
+                            //     }
+                            //     else if(where.toUpperCase() == "RESUME"){
+                            //         scrollto("#resume");
+                            //         return false;
+                
+                
+                            //     }  
+                            //     else if(where.toUpperCase() == "CONTACT"){
+                            //         var loc = document.getElementById("contact");
+                            //         loc.scrollIntoView(true);
+                
+                            //     } 
+                
+                            // },
+                
+                            quit: function(){
+                                if(confirm("Are you sure you want to quit?")){
+                                    window.close();
+                                }                                
+                            }
+                        }, {
+                            
+                            greetings : '[[gib;green;black]Enjoy Coding]\n',
+                            name: 'RBjorn terminal',
+                            prompt: '$  ',
+                            height: '1000'
+                
+                        });
+                    </script>
+                </div>
+            </section> <!-- End Console Section -->
+            <!-- Project -->
+            <section id="projects" class="projects">
+
+            <div class="container">
+                <div class="section-title" style="padding:2rem 0" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <h2>
+                        Projects
+                    </h2>
+                    <!-- <p style="height: 20rem;"><span class="typed_project" data-typed-items="Your work is going to fill a large part of your life. <br>
+                        And the only way to be truly satisfied is to do what you believe is great work. <br>
+                        And the only way to do great work is to love what you do. <br>
+                        If you haven't found it yet. keep looking!!! <br>
+                        Don't settle. As with all matters of the heart. you'll know when you find it. 
+                        <br/><br>- Steve Jobs , 
+                        Never stop fighting until you arrive at your destined place - that is! the unique you. <br>
+                        Have an aim in life. continuously acquire knowledge; work hard; and have perseverance to realise the great life.
+                        <br><br>- A. P. J. Abdul Kalam
+                        
+                        "></span></p> -->
+                </div>
+                <div class="row" style="text-align: center;">
+                    <div class="col-lg-4" data-aos="flip-up" data-aos-offset="150" data-aos-easing="ease-in-sine"><button class="btn shine" onclick="showCatagory('game');">Game Projects</button></div>
+                    <div class="col-lg-4" data-aos="flip-up" data-aos-offset="150" data-aos-easing="ease-in-sine"><button class="btn shine"onclick="showCatagory('web');">Web Designs</button></div>
+                    <div class="col-lg-4" data-aos="flip-up" data-aos-offset="150" data-aos-easing="ease-in-sine"><button class="btn shine" onclick="showCatagory('software');">Software Dev.</button></div>
+                </div>
+                <div class="row">
+                    <section class="hero-section">
+                        <div class="card-grid">
+                            <!--*****************************************************************-->
+                            <!--                          Game Project                           -->
+                            <!--*****************************************************************-->    
+                            <a class="card game" href="https://github.com/R-bjorn/MetaRoom" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="200">
+                                <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                            <div class="card__content">
+                                <p class="card__category">Game</p>
+                                <h3 class="card__heading one__line">Meta Room</h3>
+                            </div>
+                            </a>
+                            <a class="card game" href="https://github.com/R-bjorn/The-Hidden-World" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="300">
+                                <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                                <div class="card__content">
+                                    <p class="card__category">Game</p>
+                                    <h3 class="card__heading two__line">The Hidden World</h3>
+                                </div>
+                            </a>
+                            <a class="card game" href="https://github.com/R-bjorn/ArenaRoyal/tree/main/Feed%20the%20Animals" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="400">
+                                <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                                <div class="card__content">
+                                    <p class="card__category">Game</p>
+                                    <h3 class="card__heading two__line">Feed the Animals</h3>
+                                </div>                            
+                            </a>
+                            <a class="card game" href="https://github.com/R-bjorn/MazeRunner" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="500">
+                                <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                                <div class="card__content">
+                                    <p class="card__category">Game</p>
+                                    <h3 class="card__heading one__line">Maze Runner</h3>
+                                </div>                            
+                            </a>
+                            <a class="card game" href="https://github.com/R-bjorn/ArenaRoyal/tree/main/Rolling%20Ball" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="200">
+                                <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                                <div class="card__content">
+                                    <p class="card__category">Game</p>
+                                    <h3 class="card__heading one__line">Rolling Ball</h3>
+                                </div>                            
+                            </a>
+                            <a class="card game" href="https://github.com/R-bjorn/Snake-Game" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="300">
+                                <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                                <div class="card__content">
+                                    <p class="card__category">Game</p>
+                                    <h3 class="card__heading one__line">Snake Game</h3>
+                                </div>                            
+                            </a>
+                            <a class="card game" href="https://github.com/R-bjorn/Guessing-Game" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="400">
+                                <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                                <div class="card__content">
+                                    <p class="card__category">Game</p>
+                                    <h3 class="card__heading one__line">Guessing Game</h3>
+                                </div>                            
+                            </a>
+                            <a class="card game" href="https://github.com/R-bjorn/Nine-Gaps" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="500">
+                                <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                                <div class="card__content">
+                                    <p class="card__category">Game</p>
+                                    <h3 class="card__heading one__line">Nine-Gaps</h3>
+                                </div>                            
+                            </a>
+                            <a class="card game" href="https://github.com/R-bjorn/Tic-Tac-Toe" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="200">
+                                <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                                <div class="card__content">
+                                    <p class="card__category">Game</p>
+                                    <h3 class="card__heading one__line">Tic-Tac-Toe</h3>
+                                </div>                            
+                            </a>
+                            <!--*****************************************************************-->
+                            <!--                          Web Project                            -->
+                            <!--*****************************************************************-->
+                            <a class="card web" href="https://codepen.io/MR_SANDBERG/pen/KKNOoZm" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="300">
+                                <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                                <div class="card__content">
+                                    <p class="card__category">Web</p>
+                                    <h3 class="card__heading one__line">Chroma Key</h3>
+                                </div>                            
+                            </a>
+                            <a class="card web" href="https://codepen.io/MR_SANDBERG/pen/GRNLBBE" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="400">
+                                <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                                <div class="card__content">
+                                    <p class="card__category">Web</p>
+                                    <h3 class="card__heading one__line">To-do List</h3>
+                                </div>                            
+                            </a>
+                            <a class="card web" href="https://codepen.io/MR_SANDBERG/pen/qBRWGqZ" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="500">
+                                <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                                <div class="card__content">
+                                    <p class="card__category">Web</p>
+                                    <h3 class="card__heading one__line">Calculator</h3>
+                                </div>                            
+                            </a>
+                            <a class="card web" href="https://codepen.io/MR_SANDBERG/pen/dyNbPxO" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="200">
+                                <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                                <div class="card__content">
+                                    <p class="card__category">Web</p>
+                                    <h3 class="card__heading one__line">Filter Fun</h3>
+                                </div>                            
+                            </a>
+                            <!--*****************************************************************-->
+                            <!--                          Software Project                       -->
+                            <!--*****************************************************************-->
+                            <a class="card software" href="https://github.com/R-bjorn/Store-Inventory-System" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="300">
+                                <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                                <div class="card__content">
+                                    <p class="card__category">Software</p>
+                                    <h3 class="card__heading two__line">Store Inventory System</h3>
+                                </div>                            
+                            </a>
+                            <a class="card software" href="https://github.com/R-bjorn/Flight-Tracking-System" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="400">
+                                <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                                <div class="card__content">
+                                    <p class="card__category">Software</p>
+                                    <h3 class="card__heading two__line">Flight Inventory System</h3>
+                                </div>                            
+                            </a>
+                        <div>
+                        </section>
+                </div>
+            </div>
+
+            </section><!-- End Project Section -->
+            <!-- About -->
+            <section class="about" id="about">
+                <div class="section-title" style="padding:2rem 0" data-aos="zoom-in" data-aos-offset="200">
+                    <h2>
+                        About Me!
+                    </h2>
+                    <!-- <p>I'm <span class="typed" data-typed-items="Designer &#246;, Developer &#60; ? &#62;, Freelancer &#3647;, Gamer &#926;, Wizard &#8224;"></span></p> -->
+                </div>
+                <div class="container">
+                    <!-- profile -->
+                    <div class="row">
+                        <!-- Image -->
+                        <div class="col-lg-4 about__intro" data-aos="fade-right" data-aos-offset="300">
+                            <div class="margin" style="height: 500px;"></div>
+                            <a href="#" onclick="scrollto('#home'); return false;" class="photo">
+                                <h1>Ravi Trivedi</h1>
+                                <img src="Images/R-Bjorn.jpeg" />
+                                <div class="glow-wrap">
+                                <i class="glow"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Information -->
+                        <div class="col-lg-8" style="height: 600px;">
+                            <div class="about__info-background" data-aos="fade-left" data-aos-duration="500"></div>
+                            <div class="about__info-background2" data-aos="fade-left" data-aos-duration="1000">
+                                <div class="row">
+                                    <p data-aos="zoom-in" data-aos-offset="200">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum temporibus, quo perferendis error nam eveniet assumenda, ab, iusto corrupti ipsa facilis dicta iste laboriosam fugit quia maxime illo qui cupiditate!
+                                    </p>
+                                    <p data-aos="zoom-in" data-aos-offset="230">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum temporibus, quo perferendis error nam eveniet assumenda, ab, iusto corrupti ipsa facilis dicta iste laboriosam fugit quia maxime illo qui cupiditate!
+                                    </p>
+                                    <p data-aos="zoom-in" data-aos-offset="250">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum temporibus, quo perferendis error nam eveniet assumenda, ab, iusto corrupti ipsa facilis dicta iste laboriosam fugit quia maxime illo qui cupiditate!
+                                    </p>
+                                </div>
+                            </div>
+                            <div style="height: 50px;"></div>
+                            <div class="row about__info-title">
+                                
+                                <h3 class="span loader" data-aos="fade-left" data-aos-duration="500" data-aos-offset="400">
+                                    <span class='m'>H</span>
+                                    <span class='m'>E</span>
+                                    <span class='m'>L</span>
+                                    <span class='m'>L</span>
+                                    <span class='m'>O</span>
+                                    <span class='m'>&nbsp;</span>
+                                    <span class='m'>|</span>
+                                    <span class='m'>&nbsp;</span>
+                                    <span class='m'>H</span>
+                                    <span class='m'>O</span>
+                                    <span class='m'>L</span>
+                                    <span class='m'>A</span>
+                                    <span class='m'>&nbsp;</span>
+                                    <span class='m'>|</span>
+                                    <span class='m'>&nbsp;</span>
+                                    <span class='m'>B</span>
+                                    <span class='m'>O</span>
+                                    <span class='m'>N</span>
+                                    <span class='m'>J</span>
+                                    <span class='m'>O</span>
+                                    <span class='m'>U</span>
+                                    <span class='m'>R</span>
+                                    <span class='m'>&nbsp;</span>
+                                    <span class='m'>|</span>
+                                    <span class='m'>&nbsp;</span>
+                                    <span class='m'>N</span>
+                                    <span class='m'>A</span>
+                                    <span class='m'>M</span>
+                                    <span class='m'>A</span>
+                                    <span class='m'>S</span>
+                                    <span class='m'>T</span>
+                                    <span class='m'>E</span>
+                                    </h3>
+                            </div>
+                            <div class="row">
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- skills -->
+                    <section id="skills">
+                        <h3 data-aos="fade-up">
+                            Skills I Conquered!
+                        </h3>
+                        <div style="height:15px;"></div>
+                        <!-- pie chart -->
+                        <div class="row">
+                            <!-- OOP -->
+                            <div class="col-4">
+                                <h3 data-aos="fade-up"  style="font-size:3vh; padding: 20px 0; color:rgb(84, 84, 84); text-shadow: 2px 2px rgba(17, 17, 17, 0.238); font-family: 'Josefin Sans', sans-serif;">
+                                    Object Oriented 
+                                </h3>   
+                                <div class="pieID pie" data-aos="fade-up" data-aos-offset="100">
+                        
+                                </div>
+                                <ul class="pieID legend" data-aos="fade-up" data-aos-offset="100">
+                                <li>
+                                    <em>Java</em>
+                                    <span>1200</span>
+                                </li>
+                                <li>
+                                    <em>C#</em>
+                                    <span>1000</span>
+                                </li>
+                                <li>
+                                    <em>Python</em>
+                                    <span>800</span>
+                                </li>
+                                <li>
+                                    <em>C++</em>
+                                    <span>600</span>
+                                </li> 
+                                </ul>
+                            </div>
+                            <!-- Web Development -->
+                            <div class="col-4">
+                                <h3 data-aos="fade-up"  style="font-size:3vh; padding: 20px 0; color:rgb(84, 84, 84); text-shadow: 2px 2px rgba(17, 17, 17, 0.238); font-family: 'Josefin Sans', sans-serif;">
+                                    Web Designing
+                                </h3>   
+                                <div class="pieID2 pie" data-aos="fade-up" data-aos-offset="100">
+                        
+                                </div>
+                                <ul class="pieID2 legend" data-aos="fade-up" data-aos-offset="100">
+                                <li>
+                                    <em>HTML5</em>
+                                    <span>700</span>
+                                </li>
+                                <li>
+                                    <em>CSS</em>
+                                    <span>550</span>
+                                </li>
+                                <li>
+                                    <em>JavaScript</em>
+                                    <span>1500</span>
+                                </li>
+                                <li>
+                                    <em>JQuery</em>
+                                    <span>700</span>
+                                </li>
+                                <li>
+                                    <em>React</em>
+                                    <span>350</span>
+                                </li>
+                                </ul>
+                            </div>
+                            <!-- Game Development -->
+                            <div class="col-4">
+                                <h3 data-aos="fade-up"  style="font-size:3vh; padding: 20px 0; color:rgb(84, 84, 84); text-shadow: 2px 2px rgba(17, 17, 17, 0.238); font-family: 'Josefin Sans', sans-serif;">
+                                    Game Development
+                                </h3>   
+                                <div class="pieID3 pie" data-aos="fade-up" data-aos-offset="100">
+                        
+                                </div>
+                                <ul class="pieID3 legend" data-aos="fade-up" data-aos-offset="100">
+                                <li>
+                                    <em>C#</em>
+                                    <span>1200</span>
+                                </li>
+                                <li>
+                                    <em>Unity</em>
+                                    <span>1400</span>
+                                </li>
+                                <li>
+                                    <em>Blender</em>
+                                    <span>500</span>
+                                </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div style="height:100px;"></div>
+                        <h3 data-aos="fade-up">
+                            Systems I Use!
+                        </h3>
+                        <div style="height:90px;"></div>
+                        <div class="row boxes">
+                            <div class="col-lg-5" data-aos="fade-left">
+                                <div class='box'>
+                                    <div class='title windows'>Windows</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5" data-aos="fade-right" >
+                                <div class='box'>
+                                    <div class='title linux'>&nbsp;Linux&nbsp;</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="height:150px;"></div>
+                    </section>
+                </div>
+            </section><!-- End About Section -->
+            <!-- Contact -->
+            
+            <section class="contact" id="contact">
+                <h2 style="margin-top: 150px;" data-aos="fade-up">
+                    Contact Me
+                </h2>
+                <div class="container" >
+                    <form action="contact.php" method="post" style="text-align: left; padding:0 20px;">
+                        <div class="row" data-aos="fade-up">
+                            <div class="col-lg-6 col-md-12">
+                                <label for="fname">First Name</label>
+                                <input type="text" id="fname" name="firstname" placeholder="Enter your first name..">
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <label for="lname">Last Name</label>
+                                <input type="text" id="lname" name="lastname" placeholder="Enter your last name..">
+                            </div>
+                        </div>
+
+                        <div class="row" data-aos="fade-up">
+                            <div class="col">
+                                <label for="country">Email</label>
+                                <input type="text" id="email" name="email" placeholder="Enter your email..">
+                            </div>
+                        </div>
+                    
+                        <div class="row" data-aos="fade-up">
+                            <div class="col">
+                                <label for="country">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="What do you want to talk about..">
+                            </div>
+                        </div>
+                    
+                        <div class="row" data-aos="fade-up">
+                            <div class="col">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+                            </div>
+                        </div>
+                    
+                        <div class="row" data-aos="fade-up">
+                            <div class="col" style="justify-content: center; text-align: center; margin-top: 30px; transition: all 2s;">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="margin" style="height: 20px;"></div>
+            </section> <!-- End Contact Section -->
+        </main>
+    
+        <!-- Footer -->
+        <footer>
+            <!-- <div class="margin"></div> -->
+            <div class="footer">
+                <div class="bubbles">
+                    <div class="bubble" style="--size:3.227859741622317rem; --distance:6.59348204439324rem; --position:3.197834702597607%; --time:3.786640124741186s; --delay:-3.0519169429382536s;"></div>
+                    <div class="bubble" style="--size:4.789333255160948rem; --distance:7.457544999962285rem; --position:36.44470951019624%; --time:3.762931552351019s; --delay:-2.344266576470789s;"></div>
+                    <div class="bubble" style="--size:4.683120440801104rem; --distance:8.26588921002088rem; --position:56.6414270532353%; --time:3.4257780686581474s; --delay:-3.3427046712843334s;"></div>
+                    <div class="bubble" style="--size:2.8852215502787644rem; --distance:7.400446792790867rem; --position:102.93572977324908%; --time:2.585153319366583s; --delay:-3.7090199990965798s;"></div>
+                    <div class="bubble" style="--size:4.849657606856607rem; --distance:8.310839174818259rem; --position:72.98937700783134%; --time:2.4524441059249678s; --delay:-2.753061991232314s;"></div>
+                    <div class="bubble" style="--size:2.6093151559093073rem; --distance:9.9104012192652rem; --position:101.9412846113572%; --time:2.1220464829624213s; --delay:-3.486789771536898s;"></div>
+                    <div class="bubble" style="--size:5.8495136640135215rem; --distance:7.5177336506596495rem; --position:90.54031389119409%; --time:2.8941626074086857s; --delay:-2.4393309541680446s;"></div>
+                    <div class="bubble" style="--size:2.199024809443559rem; --distance:9.487158737455848rem; --position:3.19294723450926%; --time:3.3091970492934677s; --delay:-2.78750677435776s;"></div>
+                    <div class="bubble" style="--size:5.236774944656271rem; --distance:7.0340375486387545rem; --position:98.26813505554539%; --time:3.7660606656825526s; --delay:-3.278124974817049s;"></div>
+                    <div class="bubble" style="--size:2.4228760498197506rem; --distance:7.355072941981242rem; --position:28.79697815337353%; --time:3.626431651590882s; --delay:-2.672181077778098s;"></div>
+                    <div class="bubble" style="--size:2.9172924692995386rem; --distance:6.987483657053988rem; --position:-1.2395255918345538%; --time:2.0267441762799074s; --delay:-3.5167228668571253s;"></div>
+                    <div class="bubble" style="--size:5.178477783017498rem; --distance:8.185010199616217rem; --position:85.66624682867918%; --time:2.3635238318880534s; --delay:-2.7201975897539548s;"></div>
+                    <div class="bubble" style="--size:2.208632230661296rem; --distance:9.97540554235793rem; --position:90.12542961940396%; --time:2.4297342487209703s; --delay:-2.3951025267255606s;"></div>
+                    <div class="bubble" style="--size:4.186219351571116rem; --distance:9.021774038886143rem; --position:43.05613232237084%; --time:2.145638641051285s; --delay:-2.3506730362435797s;"></div>
+                    <div class="bubble" style="--size:3.337136946306888rem; --distance:9.330565773581768rem; --position:49.957277740107955%; --time:2.2039615370824026s; --delay:-2.9739988086155096s;"></div>
+                    <div class="bubble" style="--size:3.830946482009443rem; --distance:8.92169318249778rem; --position:83.915113274177%; --time:3.457724286729114s; --delay:-2.958760513691794s;"></div>
+                    <div class="bubble" style="--size:2.74944493145882rem; --distance:8.55422208870165rem; --position:74.87699186256734%; --time:3.7210699979371697s; --delay:-3.079303487727555s;"></div>
+                    <div class="bubble" style="--size:3.4457884038383586rem; --distance:6.9341563832135rem; --position:102.29014972676529%; --time:3.5016205332277917s; --delay:-2.5314282155644205s;"></div>
+                    <div class="bubble" style="--size:2.5588429718380814rem; --distance:9.087305848192816rem; --position:97.94668962985519%; --time:3.8972410791155006s; --delay:-2.669195004641319s;"></div>
+                    <div class="bubble" style="--size:4.433658236068167rem; --distance:6.580417594499754rem; --position:90.5398692567221%; --time:3.71499994487395s; --delay:-3.457937418717039s;"></div>
+                    <div class="bubble" style="--size:5.870364946637457rem; --distance:7.358623556517409rem; --position:90.55182989088013%; --time:2.507434793167265s; --delay:-3.353176165049182s;"></div>
+                    <div class="bubble" style="--size:2.614502330449132rem; --distance:9.845559352055721rem; --position:77.31671185889445%; --time:3.609585649834738s; --delay:-3.0378322501337145s;"></div>
+                    <div class="bubble" style="--size:3.520211301003939rem; --distance:9.935024794740778rem; --position:-0.8798810026689523%; --time:2.611381944270665s; --delay:-3.6902793939671397s;"></div>
+                    <div class="bubble" style="--size:3.987113433353632rem; --distance:9.677234791454277rem; --position:15.446488946976757%; --time:2.0831276908355973s; --delay:-3.057194145761872s;"></div>
+                    <div class="bubble" style="--size:2.2139012818299477rem; --distance:6.756716598850353rem; --position:74.54733456915744%; --time:2.1405812731828426s; --delay:-3.518733600837585s;"></div>
+                    <div class="bubble" style="--size:4.262870437072553rem; --distance:8.63847445402578rem; --position:38.403661249036006%; --time:2.55051297549159s; --delay:-3.7911121712073186s;"></div>
+                    <div class="bubble" style="--size:3.958838400269725rem; --distance:9.46720422426241rem; --position:9.593645997074828%; --time:2.506143745824871s; --delay:-3.5337585559389555s;"></div>
+                    <div class="bubble" style="--size:5.207009452660851rem; --distance:9.461198726507659rem; --position:87.52280424811127%; --time:3.653284036823305s; --delay:-2.3501451389025223s;"></div>
+                    <div class="bubble" style="--size:4.118672119158325rem; --distance:9.015167913756498rem; --position:83.5306071093022%; --time:3.9654240509386707s; --delay:-3.0623363725657016s;"></div>
+                    <div class="bubble" style="--size:3.5708504186572627rem; --distance:9.43841469192553rem; --position:2.907370737215123%; --time:2.5699750246621287s; --delay:-3.1557323424959316s;"></div>
+                    <div class="bubble" style="--size:5.07484585013171rem; --distance:6.572324967983971rem; --position:43.480671904777296%; --time:2.4629446111610096s; --delay:-2.9892015951197424s;"></div>
+                    <div class="bubble" style="--size:5.272767343869742rem; --distance:7.8483657122189125rem; --position:92.32308146459553%; --time:2.0234934307711994s; --delay:-3.0622104169177335s;"></div>
+                    <div class="bubble" style="--size:4.572115958512597rem; --distance:7.339586002409134rem; --position:94.94808328868935%; --time:3.782791935905589s; --delay:-3.819497082660847s;"></div>
+                    <div class="bubble" style="--size:3.8796684529787555rem; --distance:9.876944260138139rem; --position:99.55844276236793%; --time:3.5056299678458376s; --delay:-2.936486069289916s;"></div>
+                    <div class="bubble" style="--size:4.572880304978428rem; --distance:8.669488179820114rem; --position:97.94573033674624%; --time:3.711269764488244s; --delay:-3.5189554607019518s;"></div>
+                    <div class="bubble" style="--size:4.265839353933565rem; --distance:6.075867816264228rem; --position:40.500271127650166%; --time:3.6545719494680875s; --delay:-3.3003177907001713s;"></div>
+                    <div class="bubble" style="--size:2.7798692068356905rem; --distance:7.610746354909127rem; --position:-1.938131430263239%; --time:3.1473512527666787s; --delay:-3.430539878929151s;"></div>
+                    <div class="bubble" style="--size:2.1063914951556955rem; --distance:7.469483345460821rem; --position:40.68852445344737%; --time:2.8445564138312593s; --delay:-2.6854544449122852s;"></div>
+                    <div class="bubble" style="--size:5.394638484164036rem; --distance:9.756223437554832rem; --position:49.51231097211333%; --time:3.0676719982702108s; --delay:-3.851419712006211s;"></div>
+                    <div class="bubble" style="--size:4.920705733346445rem; --distance:7.211101583358828rem; --position:27.12303179504164%; --time:2.7375264998105178s; --delay:-3.1677244918641994s;"></div>
+                    <div class="bubble" style="--size:5.248359689416192rem; --distance:6.857976161845007rem; --position:59.9031957705422%; --time:3.7672227060583383s; --delay:-2.329541056497451s;"></div>
+                    <div class="bubble" style="--size:3.802323213335378rem; --distance:8.534577360853593rem; --position:92.46257689387727%; --time:2.741874007571708s; --delay:-2.2170061244444392s;"></div>
+                    <div class="bubble" style="--size:5.662293760690053rem; --distance:6.69633095936323rem; --position:84.25114798363171%; --time:3.834956416835469s; --delay:-3.831510021377043s;"></div>
+                    <div class="bubble" style="--size:2.8137627628566833rem; --distance:6.4342516766697395rem; --position:27.148571422712862%; --time:2.4635995424336703s; --delay:-2.3922782574687504s;"></div>
+                    <div class="bubble" style="--size:5.593938796562872rem; --distance:9.86911351171782rem; --position:-4.419039820611623%; --time:3.5097730676858903s; --delay:-2.892585682079713s;"></div>
+                    <div class="bubble" style="--size:5.260837740627048rem; --distance:8.407912837186831rem; --position:52.984875178982364%; --time:2.934177260360164s; --delay:-2.1343018713596127s;"></div>
+                    <div class="bubble" style="--size:3.042841978589764rem; --distance:7.92021568382802rem; --position:16.53538518148582%; --time:3.9393250204206725s; --delay:-3.449164736419202s;"></div>
+                    <div class="bubble" style="--size:5.724867193275211rem; --distance:7.994961814426357rem; --position:65.06489775387658%; --time:3.943686996036405s; --delay:-3.243285839351422s;"></div>
+                    <div class="bubble" style="--size:5.078415697307301rem; --distance:9.329393653576373rem; --position:76.67992052770582%; --time:2.822225811182419s; --delay:-2.321331022339779s;"></div>
+                    <div class="bubble" style="--size:4.387455390445106rem; --distance:9.859237803268742rem; --position:7.617578458371572%; --time:3.173484919200394s; --delay:-2.0945204565683824s;"></div>
+                    <div class="bubble" style="--size:5.927605333623891rem; --distance:8.80933917413179rem; --position:72.82713519923334%; --time:3.135495088544063s; --delay:-3.6445507917402895s;"></div>
+                    <div class="bubble" style="--size:3.2895169580594716rem; --distance:7.900734208415289rem; --position:5.530326346279368%; --time:3.514720112805863s; --delay:-2.5044659617765896s;"></div>
+                    <div class="bubble" style="--size:5.158712527424265rem; --distance:6.3327944874093856rem; --position:86.90736109158809%; --time:2.345896941544262s; --delay:-2.9044829703798314s;"></div>
+                    <div class="bubble" style="--size:2.817546091644651rem; --distance:9.696152052095139rem; --position:82.46086696458615%; --time:3.4887551307103584s; --delay:-3.716169281569064s;"></div>
+                    <div class="bubble" style="--size:2.6141973779001626rem; --distance:6.410295916068958rem; --position:36.958606221564295%; --time:3.463702381351156s; --delay:-2.652020582498856s;"></div>
+                    <div class="bubble" style="--size:2.715361963782729rem; --distance:9.3661573712176rem; --position:86.68854600505857%; --time:3.4787504070370865s; --delay:-2.41815504211902s;"></div>
+                    <div class="bubble" style="--size:4.19546271164727rem; --distance:8.193794826766478rem; --position:69.58807045574342%; --time:2.6707242617096516s; --delay:-3.247360803090562s;"></div>
+                    <div class="bubble" style="--size:2.2009962921635147rem; --distance:8.284621717902525rem; --position:102.91937514830981%; --time:2.5014832403392995s; --delay:-2.405999788022826s;"></div>
+                    <div class="bubble" style="--size:3.7959990524016307rem; --distance:6.985777136059921rem; --position:40.869326212874675%; --time:2.701394330773899s; --delay:-2.1237476438463108s;"></div>
+                    <div class="bubble" style="--size:2.5602681446687683rem; --distance:6.278092499369759rem; --position:100.94807320178835%; --time:2.8698781803466806s; --delay:-2.8345255731554104s;"></div>
+                    <div class="bubble" style="--size:5.498195578198579rem; --distance:8.582485706465288rem; --position:43.52985196566626%; --time:3.152553385301679s; --delay:-2.4283036791211523s;"></div>
+                    <div class="bubble" style="--size:3.6119121359495807rem; --distance:6.10352150975832rem; --position:82.37257163782402%; --time:3.4811347577608815s; --delay:-3.7777716119783493s;"></div>
+                    <div class="bubble" style="--size:4.419404873249716rem; --distance:7.6812997213843355rem; --position:36.46310715567268%; --time:3.297433299910433s; --delay:-3.6166761000781866s;"></div>
+                    <div class="bubble" style="--size:4.323049061593934rem; --distance:6.42091810833939rem; --position:93.1531638657236%; --time:3.335404713126899s; --delay:-2.192840656427332s;"></div>
+                    <div class="bubble" style="--size:3.2976288481185208rem; --distance:9.57041708971968rem; --position:84.80721045296823%; --time:2.561174499179237s; --delay:-2.9099833692273274s;"></div>
+                    <div class="bubble" style="--size:2.3875499579827055rem; --distance:8.76815455708528rem; --position:16.58985101797299%; --time:2.403812334552532s; --delay:-2.251921685122182s;"></div>
+                    <div class="bubble" style="--size:2.276169304053295rem; --distance:6.073289016515641rem; --position:-3.7857985221200896%; --time:2.738216005376639s; --delay:-3.155618622221869s;"></div>
+                    <div class="bubble" style="--size:4.761080498134084rem; --distance:6.799940139847784rem; --position:77.51701104964022%; --time:3.08150016641224s; --delay:-3.861389074610545s;"></div>
+                    <div class="bubble" style="--size:3.661091831279962rem; --distance:8.48980336512686rem; --position:-2.8239079549495383%; --time:2.0147716064704717s; --delay:-2.3953230887909847s;"></div>
+                    <div class="bubble" style="--size:5.3965100834432524rem; --distance:9.379574871993784rem; --position:34.20450433633504%; --time:2.7598962506295766s; --delay:-2.880477736509203s;"></div>
+                    <div class="bubble" style="--size:5.358712567031609rem; --distance:6.525789990792049rem; --position:23.40445374203434%; --time:3.6901432833801215s; --delay:-2.328625843264979s;"></div>
+                    <div class="bubble" style="--size:3.8438761313781296rem; --distance:9.195065767341571rem; --position:21.44834261163124%; --time:2.644380483361425s; --delay:-2.9612419800822s;"></div>
+                    <div class="bubble" style="--size:3.199275206207318rem; --distance:8.28238947290556rem; --position:-0.30088529621798976%; --time:3.832969056806071s; --delay:-3.405391532530102s;"></div>
+                    <div class="bubble" style="--size:2.583850614963187rem; --distance:6.974447088105431rem; --position:56.40584998302098%; --time:3.3413419975128447s; --delay:-3.049955520071405s;"></div>
+                    <div class="bubble" style="--size:5.79560178377767rem; --distance:6.180005787019538rem; --position:94.68278087829927%; --time:3.0680962547742188s; --delay:-2.602725776307028s;"></div>
+                    <div class="bubble" style="--size:3.1050956308099362rem; --distance:9.455529612900966rem; --position:19.875410773176917%; --time:3.8379490519971085s; --delay:-2.6621576607150135s;"></div>
+                    <div class="bubble" style="--size:4.041811103329812rem; --distance:8.631263967678667rem; --position:91.47977672933477%; --time:2.147345865328526s; --delay:-3.275210533933972s;"></div>
+                    <div class="bubble" style="--size:3.3434088999210214rem; --distance:9.483609751241524rem; --position:84.18570392660004%; --time:3.2959341300790643s; --delay:-3.8342803722756282s;"></div>
+                    <div class="bubble" style="--size:2.722564878104066rem; --distance:6.064515949855098rem; --position:25.82552040926005%; --time:2.9445775109180223s; --delay:-3.9924041632244296s;"></div>
+                    <div class="bubble" style="--size:2.240660921716345rem; --distance:9.992004899516324rem; --position:8.917398402311003%; --time:2.736154199711041s; --delay:-3.0928804778751617s;"></div>
+                    <div class="bubble" style="--size:4.476885935967706rem; --distance:7.639829392691839rem; --position:39.503020368869564%; --time:3.6697044026522256s; --delay:-3.0964441881036717s;"></div>
+                    <div class="bubble" style="--size:2.372334625957123rem; --distance:6.24564484545374rem; --position:49.40594604443107%; --time:2.8078780381984423s; --delay:-3.276121074921284s;"></div>
+                    <div class="bubble" style="--size:3.202444331340998rem; --distance:9.504979640149706rem; --position:-4.490183047218011%; --time:2.944934987979576s; --delay:-2.6955237694593968s;"></div>
+                    <div class="bubble" style="--size:5.662159345269516rem; --distance:6.177927359977194rem; --position:29.631735839327504%; --time:3.4450418679509798s; --delay:-3.37349016184871s;"></div>
+                    <div class="bubble" style="--size:5.133374630827156rem; --distance:9.706218977380152rem; --position:81.77376884578658%; --time:2.117435972936573s; --delay:-2.8326899227100975s;"></div>
+                    <div class="bubble" style="--size:2.136570656905434rem; --distance:9.070791554986041rem; --position:55.23392171076206%; --time:3.6926604658388356s; --delay:-2.591191559256457s;"></div>
+                    <div class="bubble" style="--size:2.241325669839048rem; --distance:8.983630169518694rem; --position:83.24074311904278%; --time:3.2562141003012255s; --delay:-2.143304943806516s;"></div>
+                    <div class="bubble" style="--size:5.126937140737336rem; --distance:9.400472648276978rem; --position:6.844009682550503%; --time:2.673439163722067s; --delay:-3.4824857566309517s;"></div>
+                    <div class="bubble" style="--size:5.502345584036818rem; --distance:6.060599025372014rem; --position:70.35233174763874%; --time:2.8136102600015227s; --delay:-2.7023018883648082s;"></div>
+                    <div class="bubble" style="--size:2.3060699148907133rem; --distance:7.4460640382009275rem; --position:91.51883906235108%; --time:3.5771519545788144s; --delay:-2.196112895560422s;"></div>
+                    <div class="bubble" style="--size:5.600896936952939rem; --distance:8.23506090118011rem; --position:80.42014783626954%; --time:2.688142077843953s; --delay:-3.120113627524491s;"></div>
+                    <div class="bubble" style="--size:3.0648601416917423rem; --distance:7.604193057531743rem; --position:84.09777667493675%; --time:2.4288887074955516s; --delay:-3.809293775039038s;"></div>
+                    <div class="bubble" style="--size:5.681683649920158rem; --distance:8.108046313489282rem; --position:99.97635671517749%; --time:2.156805134113533s; --delay:-2.430541239004817s;"></div>
+                    <div class="bubble" style="--size:3.6596428328070507rem; --distance:9.605677001055732rem; --position:35.78902247879725%; --time:2.7897715244665364s; --delay:-3.1229500065335083s;"></div>
+                    <div class="bubble" style="--size:3.6306355054823776rem; --distance:8.189069949041746rem; --position:-3.8597322453549743%; --time:2.3617581435853623s; --delay:-3.617380354491746s;"></div>
+                    <div class="bubble" style="--size:5.266494840896213rem; --distance:6.290850662781467rem; --position:16.076179057634153%; --time:3.2307879311116103s; --delay:-3.3512833122520784s;"></div>
+                    <div class="bubble" style="--size:4.238054153050614rem; --distance:7.5005451510833785rem; --position:23.713212576162476%; --time:2.413587829251846s; --delay:-3.5815278853298063s;"></div>
+                    <div class="bubble" style="--size:2.013119694380288rem; --distance:7.6992967845312865rem; --position:102.57155473055795%; --time:2.2219237191597756s; --delay:-2.8049439203124127s;"></div>
+                    <div class="bubble" style="--size:5.843742159315145rem; --distance:8.83536536899422rem; --position:47.704581615637245%; --time:3.4272221265768965s; --delay:-3.7362322977128675s;"></div>
+                    <div class="bubble" style="--size:2.9122511501303743rem; --distance:9.257824042570427rem; --position:37.979575562354896%; --time:3.9049363800547443s; --delay:-3.450867934519097s;"></div>
+                    <div class="bubble" style="--size:3.904968834553803rem; --distance:7.392415332144004rem; --position:74.35837691187774%; --time:2.2907764358289375s; --delay:-2.2310317755703215s;"></div>
+                    <div class="bubble" style="--size:2.211312869886589rem; --distance:7.0261961551836905rem; --position:10.413208974357438%; --time:2.153291808372098s; --delay:-3.8156554327816488s;"></div>
+                    <div class="bubble" style="--size:3.3750456049508504rem; --distance:7.4928025899976385rem; --position:101.5416028260118%; --time:2.335525866274375s; --delay:-3.67196370196883s;"></div>
+                    <div class="bubble" style="--size:4.67324654739366rem; --distance:8.078965172356614rem; --position:71.03796342486206%; --time:2.97137815661629s; --delay:-2.0008813857441576s;"></div>
+                    <div class="bubble" style="--size:3.5158711025635814rem; --distance:6.858813449610056rem; --position:33.82536362059484%; --time:3.731638358017727s; --delay:-3.0943377129083363s;"></div>
+                    <div class="bubble" style="--size:4.567873459172471rem; --distance:6.893963369525801rem; --position:91.0236332892651%; --time:3.69685560417366s; --delay:-3.5252606323339872s;"></div>
+                    <div class="bubble" style="--size:3.997747610921352rem; --distance:7.171548824949149rem; --position:23.371523761463074%; --time:2.3933685372047804s; --delay:-2.9863529336806014s;"></div>
+                    <div class="bubble" style="--size:5.557594149770441rem; --distance:9.650401332060408rem; --position:95.31516644290562%; --time:2.60048181939524s; --delay:-2.9759616491118117s;"></div>
+                    <div class="bubble" style="--size:2.046887016280018rem; --distance:8.906190764299186rem; --position:62.30326849043553%; --time:2.119496384718063s; --delay:-3.7799581142475494s;"></div>
+                    <div class="bubble" style="--size:3.3969286493462407rem; --distance:7.702301424463752rem; --position:56.9447304266169%; --time:3.599549338590759s; --delay:-3.656130209025808s;"></div>
+                    <div class="bubble" style="--size:3.621745810907501rem; --distance:6.732180883954551rem; --position:90.99198277501759%; --time:3.7204719013620697s; --delay:-2.3655856080209885s;"></div>
+                    <div class="bubble" style="--size:2.6668886400137453rem; --distance:7.846634600854008rem; --position:13.153660419379676%; --time:3.4773010919189145s; --delay:-3.1210625398420664s;"></div>
+                    <div class="bubble" style="--size:2.372751783099223rem; --distance:8.770176965619854rem; --position:73.50410901705294%; --time:2.496572547091856s; --delay:-3.0831120047943834s;"></div>
+                    <div class="bubble" style="--size:4.401619994260858rem; --distance:9.897848089000494rem; --position:103.14535460293368%; --time:2.27845862646734s; --delay:-2.5944518038197986s;"></div>
+                    <div class="bubble" style="--size:2.0018737012065477rem; --distance:9.581734018773506rem; --position:89.59034019752227%; --time:2.294474390020236s; --delay:-3.5255466055496494s;"></div>
+                    <div class="bubble" style="--size:5.168595873274152rem; --distance:7.5745603924658145rem; --position:-2.11885277879587%; --time:3.769744039483501s; --delay:-2.065933447573144s;"></div>
+                    <div class="bubble" style="--size:2.7600363983247593rem; --distance:8.026389467331214rem; --position:36.47150278796798%; --time:3.8570330259411816s; --delay:-3.5336638181467426s;"></div>
+                    <div class="bubble" style="--size:5.914173043314857rem; --distance:7.979110837732404rem; --position:13.196621531974614%; --time:2.7730067279235264s; --delay:-3.103205626470852s;"></div>
+                    <div class="bubble" style="--size:5.3156377001954045rem; --distance:7.911018437303569rem; --position:63.80165293016627%; --time:2.6630228893387233s; --delay:-3.3950517832504086s;"></div>
+                    <div class="bubble" style="--size:5.84694960801422rem; --distance:6.643745149648512rem; --position:61.02166895263278%; --time:2.3296007166122625s; --delay:-2.9754893326110885s;"></div>
+                    <div class="bubble" style="--size:5.209901145685789rem; --distance:6.682757664484752rem; --position:67.94584321943273%; --time:2.7900359401761454s; --delay:-3.409848563990292s;"></div>
+                    <div class="bubble" style="--size:2.1529969435711127rem; --distance:6.315644580030573rem; --position:29.445237330976788%; --time:2.402468077483451s; --delay:-3.166378012764259s;"></div>
+                    <div class="bubble" style="--size:5.1789238112752rem; --distance:9.849602536119598rem; --position:49.094837646016025%; --time:2.0932573083146773s; --delay:-2.136962748644326s;"></div>
+                    <div class="bubble" style="--size:5.451708686544505rem; --distance:7.379409591022889rem; --position:96.10375143176174%; --time:2.5147962448226004s; --delay:-3.192894743870086s;"></div>
+                    <div class="bubble" style="--size:3.450779686783278rem; --distance:9.19123698832156rem; --position:39.848973367862556%; --time:2.3183201671487947s; --delay:-3.8936442609276s;"></div>
+                    <div class="bubble" style="--size:5.721985915509812rem; --distance:6.399732600452724rem; --position:-1.8195028950659209%; --time:3.373552964197244s; --delay:-2.3752187720421567s;"></div>
+                    <div class="bubble" style="--size:3.8129696470005108rem; --distance:8.121931917594438rem; --position:57.06909094464197%; --time:2.1129868270665004s; --delay:-3.2398176199928903s;"></div>
+                    <div class="bubble" style="--size:3.935957869769073rem; --distance:8.75621048583212rem; --position:55.035206984154335%; --time:2.3755748381405786s; --delay:-3.301947143872403s;"></div>
+                </div>
+                <div class="content">
+                    <div>
+                        <!-- <div><b>Eldew</b><a href="#">Secuce</a><a href="#">Drupand</a><a href="#">Oceash</a><a href="#">Ugefe</a><a href="#">Babed</a></div>
+                        <div><b>Spotha</b><a href="#">Miskasa</a><a href="#">Agithe</a><a href="#">Scesha</a><a href="#">Lulle</a></div>
+                        <div><b>Chashakib</b><a href="#">Chogauw</a><a href="#">Phachuled</a><a href="#">Tiebeft</a><a href="#">Ocid</a><a href="#">Izom</a><a href="#">Ort</a></div>
+                        <div><b>Athod</b><a href="#">Pamuz</a><a href="#">Vapert</a><a href="#">Neesk</a><a href="#">Omemanen</a></div> -->
+                    </div>
+                    <div><a class="image" href="https://codepen.io/z-" target="_blank" style="background-image: url(&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/happy.svg&quot;)"></a>
+                        <p>©2019 Not Really</p>
+                    </div>
+                </div>
+            </div><svg style="position:fixed; top:100vh">
+                <defs>
+                    <filter id="blob">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="blob"></feColorMatrix>
+                        <feComposite in="SourceGraphic" in2="blob" operator="atop"></feComposite>
+                    </filter>
+                </defs>
+            </svg>
+        </footer>
+    
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center" onclick="scrollto('#home'); return false" style="text-align: center; vertical-align:bottom; text-decoration: none;" >
+            <i class='fas fa-angle-double-up' style='font-size:36px;'></i></a>
+
+        <!-- JS Files -->
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+        <!-- JavaScript -->
+        <script src="JS/script.js"></script>
+    </body>
+    
+</html>
