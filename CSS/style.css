@@ -615,11 +615,11 @@ body {
 }
 
 .about #skills .box .windows {
-  background: no-repeat center/300% url("../Images/windows.png");
+  background: no-repeat center/300% url("../Images/windows.webp");
 }
 
 .about #skills .box .linux {
-  background: no-repeat center/300% url("../Images/linux.png");
+  background: no-repeat center/300% url("../Images/linux.webp");
 }
 
 .about #skills .box .title:hover {

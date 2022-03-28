@@ -9,10 +9,10 @@ var particles = Particles.init({
   connectParticles: true,
   responsive: [
     {
-      breakpoint: 768,
+      breakpoint: 10,
       options: {
         color: ["#faebd7", "#03dac6", "#ff0266"],
-        maxParticles: 1000,
+        maxParticles: 20,
         connectParticles: false
       }
     }
@@ -55,133 +55,97 @@ function onElementHeightChange(elm, callback) {
 //   /**
 //    * Easy on scroll event listener 
 //    */
-   const onscroll = (el, listener) => {
-    el.addEventListener('scroll', listener)
-  }
-
-  /**
-   * Back to top button
-   */
-   let backtotop = document.querySelector('.back-to-top')
-   if (backtotop != null) {
-     const toggleBacktotop = () => {
-       if (window.scrollY > 300) {
-         backtotop.classList.add('active')
-       } else {
-         backtotop.classList.remove('active')
-       }
-     }
-     window.addEventListener('load', toggleBacktotop)
-     onscroll(document, toggleBacktotop)
-   }
+    let backtotop = document.querySelector('.back-to-top')
+    if (backtotop != null) {
+      if (window.scrollY > 300) {
+        backtotop.classList.add('active')
+      } else {
+        backtotop.classList.remove('active')
+      }
+    }
 })();
 
 // Change background
 (function() {
-  const onscroll = (el, listener) => {
-    el.addEventListener('scroll', listener)
-  }
   let particlebg = document.getElementById("main__background");
   let landscape = document.getElementById("landscape__background");
   let snowybg = document.getElementById("snowy__background");
-  if(landscape != null){
-    const toggleBackground = () => {
-      if(window.scrollY > 0 && window.scrollY < 900){
+  if(landscape != null && particlebg != null && snowybg != null){
+    
+    window.addEventListener('scroll', toggleBackground = () => {
+      particlebg.classList.remove("active");
+      landscape.classList.remove('active')
+      snowybg.classList.remove('active')
+      if(window.scrollY < 900){
         particlebg.classList.add("active");
-        if(landscape.classList.contains('active')){          
-          landscape.classList.remove('active')
-        }        
-        if(snowybg.classList.contains('active')){
-          snowybg.classList.remove('active');
-        }
       }
-      else if(window.scrollY > 900 && window.scrollY < 4700){
+      else if(window.scrollY < 4700){
         landscape.classList.add('active')
-        if(particlebg.classList.contains('active')){
-          particlebg.classList.remove("active");
-        }        
-        if(snowybg.classList.contains('active')){
-          snowybg.classList.remove('active');
-        }
       }
       else if(window.scrollY > 4700){
-        snowybg.classList.add('active')    
-        if(particlebg.classList.contains('active')){
-          particlebg.classList.remove("active");
-        }
-        if(landscape.classList.contains('active')){          
-          landscape.classList.remove('active')
-        }    
+        snowybg.classList.add('active')      
       }
-    }
-    window.addEventListener('load', toggleBackground)
-    onscroll(document, toggleBackground)
+    }, {passive: true})
   }
 })();
 
 // Header Hide/show
-(function(){
+// (function(){
+//   var doc = document.documentElement;
+//   var w = window;
 
-  var doc = document.documentElement;
-  var w = window;
+//   var prevScroll = w.scrollY || doc.scrollTop;
+//   var curScroll;
+//   var direction = 0;
+//   var prevDirection = 0;
+//   var scrollCount = 0;
 
-  var prevScroll = w.scrollY || doc.scrollTop;
-  var curScroll;
-  var direction = 0;
-  var prevDirection = 0;
-  var scrollCount = 0;
+//   var header = document.getElementById('myHeader');
 
-  var header = document.getElementById('myHeader');
+//   var checkScroll = function() {
 
-  var checkScroll = function() {
+//     curScroll = w.scrollY || doc.scrollTop;
+//     if (curScroll > prevScroll) { 
+//       //scrolled up
+//       direction = 2;
+//     }
+//     else if (curScroll < prevScroll) { 
+//       //scrolled down
+//       direction = 1;
+//     }
 
-    /*
-    ** Find the direction of scroll
-    ** 0 - initial, 1 - up, 2 - down
-    */
+//     if (direction !== prevDirection) {
+//       toggleHeader(direction, curScroll);
+//     }
 
-    curScroll = w.scrollY || doc.scrollTop;
-    if (curScroll > prevScroll) { 
-      //scrolled up
-      direction = 2;
-    }
-    else if (curScroll < prevScroll) { 
-      //scrolled down
-      direction = 1;
-    }
+//     prevScroll = curScroll;
+//   };
 
-    if (direction !== prevDirection) {
-      toggleHeader(direction, curScroll);
-    }
+//   var toggleHeader = function(direction, curScroll) {
 
-    prevScroll = curScroll;
-  };
-
-  var toggleHeader = function(direction, curScroll) {
-
-    if(curScroll < prevScroll){
-      scrollCount++;
-    }
-    else{
-      scrollCount--;
-    }
-    if (direction === 2 && scrollCount < -5) { 
-      header.classList.remove('sticky');
-      prevDirection = direction;
-      scrollCount = 0;
-    }
-    else if (direction === 1 && scrollCount > 15) {
-      header.classList.add('sticky');
-      prevDirection = direction;
-      scrollCount = 0;
-    }
+//     if(curScroll < prevScroll){
+//       scrollCount++;
+//     }
+//     else{
+//       scrollCount--;
+//     }
+//     if (direction === 2 && scrollCount < -5) { 
+//       header.classList.remove('sticky');
+//       prevDirection = direction;
+//       scrollCount = 0;
+//     }
+//     else if (direction === 1 && scrollCount > 15) {
+//       header.classList.add('sticky');
+//       prevDirection = direction;
+//       scrollCount = 0;
+//     }
 
     
-  };
+//   };
 
-  window.addEventListener('scroll', checkScroll);
+//   window.addEventListener('scroll', checkScroll, {passive: true});
 
-})();
+// })();
 
 // Scroll To Top
 function scrollToTop() {

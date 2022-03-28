@@ -7,28 +7,27 @@
         <link rel="stylesheet" href="CSS/style.css">
         <link rel="icon" type="image/x-icon" href="Images/logo.png">
         <!-- codepen head -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500&family=Raleway:wght@100;200;300;400;500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- <link rel="preload" href="https://fonts.googleapis.com" as="style">
+        <link rel="preload" href="https://fonts.gstatic.com" crossorigin as="style">
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500&family=Raleway:wght@100;200;300;400;500&family=Roboto:wght@300;400;700&display=swap" as="style">
+        <link rel="preload" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" as="style">
+        <link rel="preload" href="https://fonts.googleapis.com/icon?family=Material+Icons" as="style"> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
-        <!-- Header -->
-        <link rel="stylesheet" href="CSS/Header/header.css">
-        <!-- Main Intro -->
-        <link rel="stylesheet" href="CSS/Home/main-intro.css">
-        <!-- Landscape -->
+
+        <!-- <link rel="stylesheet" href="CSS/Header/header.css"> -->
+        <link rel="preload" href="CSS/Header/header.css"  as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="CSS/Home/main-intro.css"  as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="CSS/Sunrise/sunrise.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="CSS/Snow/snow.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="CSS/Projects/project.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="CSS/Skills/skills.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="CSS/Footer/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <!-- <link rel="stylesheet" href="CSS/Home/main-intro.css">
         <link rel="stylesheet" href="CSS/Sunrise/sunrise.css">`
-        <!-- Snowy Background -->
         <link rel="stylesheet" href="CSS/Snow/snow.css">
-        <!-- Project -->
         <link rel="stylesheet" href="CSS/Projects/project.css">
-        <!-- Skills -->
         <link rel="stylesheet" href="CSS/Skills/skills.css">
-        <!-- Magic Card -->
-        <link rel="stylesheet" href="CSS/Magic-Card/magic-card.css">
-        <!-- Footer -->
-        <link rel="stylesheet" href="CSS/Footer/footer.css">
+        <link rel="stylesheet" href="CSS/Footer/footer.css"> -->
         <!-- Bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <!-- Fake Terminal -->
@@ -36,8 +35,8 @@
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
         <!-- About me -->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-        <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+        <!-- <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat" as="style"> -->
+        <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css">
         <style>
             .margin{
                 margin:0;
@@ -71,7 +70,7 @@
         <main id="main">
             <!-- Header -->
             <header class="header sticky" id="myHeader">
-                <h1 class="logo"><a href="#"><img src="Images/logo.png" alt="RBjorn's Logo" width="100px"></a></h1>
+                <h1 class="logo"><a href="#"><img  width="100px" height="100px" src="Images/logo.webp" alt="RBjorn's Logo"></a></h1>
         
                 <nav id="nav-1">
                     <ul class="main-nav">
@@ -559,34 +558,6 @@
                                 document.getElementById("knowLinux").classList.remove("hide")
                             }, 
                 
-                            // cd: function(where){
-                            //     if(where.toUpperCase() == "HOME"){
-                            //         var loc = document.getElementById("home");
-                            //         loc.scrollIntoView(true);
-                            //     }
-                            //     else if(where.toUpperCase() == "PROJECT"){
-                            //         scrollto("#projects");
-                            //         return false;
-                            //     }
-                            //     else if(where.toUpperCase() == "ABOUT"){
-                            //         scrollto("#about");
-                            //         return false;
-                
-                            //     }
-                            //     else if(where.toUpperCase() == "RESUME"){
-                            //         scrollto("#resume");
-                            //         return false;
-                
-                
-                            //     }  
-                            //     else if(where.toUpperCase() == "CONTACT"){
-                            //         var loc = document.getElementById("contact");
-                            //         loc.scrollIntoView(true);
-                
-                            //     } 
-                
-                            // },
-                
                             quit: function(){
                                 if(confirm("Are you sure you want to quit?")){
                                     window.close();
@@ -635,63 +606,63 @@
                             <!--                          Game Project                           -->
                             <!--*****************************************************************-->    
                             <a class="card game" href="https://github.com/R-bjorn/MetaRoom" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="200">
-                                <div class="card__background" style="background-image: url(Images/Project/MetaRoom.jpg)"></div>
+                                <div class="card__background" style="background-image: url(Images/Project/MetaRoom.webp)"></div>
                                 <div class="card__content" >
                                     <p class="card__category">Game</p>
                                 </div>
                                 <h3 class="card__heading one__line">Meta Room</h3>
                             </a>
                             <a class="card game" href="https://github.com/R-bjorn/The-Hidden-World" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="300">
-                                <div class="card__background" style="background-image: url(Images/Project/HiddenWorld.png)"></div>
+                                <div class="card__background" style="background-image: url(Images/Project/TheHiddenWorld.webp)"></div>
                                 <div class="card__content">
                                     <p class="card__category">Game</p>
                                 </div>
                                 <h3 class="card__heading two__line">The Hidden World</h3>
                             </a>
                             <a class="card game" href="https://github.com/R-bjorn/ArenaRoyal/tree/main/Feed%20the%20Animals" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="400">
-                                <div class="card__background" style="background-image: url(Images/Project/FeedTheAnimal.png)"></div>
+                                <div class="card__background" style="background-image: url(Images/Project/FeedTheAnimals.webp)"></div>
                                 <div class="card__content">
                                     <p class="card__category">Game</p>
                                 </div>      
                                 <h3 class="card__heading two__line">Feed the Animals</h3>                      
                             </a>
                             <a class="card game" href="https://github.com/R-bjorn/MazeRunner" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="500">
-                                <div class="card__background" style="background-image: url(Images/Project/MazeRunner.jpg)"></div>
+                                <div class="card__background" style="background-image: url(Images/Project/MazeRunner.webp)"></div>
                                 <div class="card__content">
                                     <p class="card__category">Game</p>
                                 </div>  
                                 <h3 class="card__heading one__line">Maze Runner</h3>                          
                             </a>
                             <a class="card game" href="https://github.com/R-bjorn/ArenaRoyal/tree/main/Rolling%20Ball" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="200">
-                                <div class="card__background" style="background-image: url(Images/Project/RollingBall.png)"></div>
+                                <div class="card__background" style="background-image: url(Images/Project/RollingBall.webp)"></div>
                                 <div class="card__content">
                                     <p class="card__category">Game</p>
                                 </div>                
                                 <h3 class="card__heading one__line">Rolling Ball</h3>            
                             </a>
                             <a class="card game" href="https://github.com/R-bjorn/Snake-Game" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="300">
-                                <div class="card__background" style="background-image: url(Images/Project/Snakes.png)"></div>
+                                <div class="card__background" style="background-image: url(Images/Project/Snakes.webp)"></div>
                                 <div class="card__content">
                                     <p class="card__category">Game</p>
                                 </div>                            
                                 <h3 class="card__heading one__line">Snake Game</h3>
                             </a>
                             <a class="card game" href="https://github.com/R-bjorn/Guessing-Game" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="400">
-                                <div class="card__background" style="background-image: url(Images/Project/GuessingGame.jpg)"></div>
+                                <div class="card__background" style="background-image: url(Images/Project/GuessingGame.webp)"></div>
                                 <div class="card__content">
                                     <p class="card__category">Game</p>
                                 </div>                            
                                 <h3 class="card__heading one__line">Guessing Game</h3>
                             </a>
                             <a class="card game" href="https://github.com/R-bjorn/Nine-Gaps" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="500">
-                                <div class="card__background" style="background-image: url(Images/Project/NineGaps.jpg)"></div>
+                                <div class="card__background" style="background-image: url(Images/Project/NineGaps.webp)"></div>
                                 <div class="card__content">
                                     <p class="card__category">Game</p>
                                 </div>                            
                                 <h3 class="card__heading one__line">Nine-Gaps</h3>
                             </a>
                             <a class="card game" href="https://github.com/R-bjorn/Tic-Tac-Toe" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="200">
-                                <div class="card__background" style="background-image: url(Images/Project/TicTacToe.jpg)"></div>
+                                <div class="card__background" style="background-image: url(Images/Project/TicTacToe.webp)"></div>
                                 <div class="card__content">
                                     <p class="card__category">Game</p>
                                 </div>                            
@@ -701,28 +672,28 @@
                             <!--                          Web Project                            -->
                             <!--*****************************************************************-->
                             <a class="card web" href="https://codepen.io/MR_SANDBERG/pen/KKNOoZm" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="300">
-                                <div class="card__background" style="background-image: url(Images/Project/ChromaKey.jpg)"></div>
+                                <div class="card__background" style="background-image: url(Images/Project/ChromaKey.webp)"></div>
                                 <div class="card__content">
                                     <p class="card__category">Web</p>
                                 </div>                            
                                 <h3 class="card__heading one__line">Chroma Key</h3>
                             </a>
                             <a class="card web" href="https://codepen.io/MR_SANDBERG/pen/GRNLBBE" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="400">
-                                <div class="card__background" style="background-image: url(Images/Project/ToDoList.jpg)"></div>
+                                <div class="card__background" style="background-image: url(Images/Project/ToDoList.webp)"></div>
                                 <div class="card__content">
                                     <p class="card__category">Web</p>
                                 </div>                            
                                 <h3 class="card__heading one__line">To-do List</h3>
                             </a>
                             <a class="card web" href="https://codepen.io/MR_SANDBERG/pen/qBRWGqZ" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="500">
-                                <div class="card__background" style="background-image: url(Images/Project/Calculator.png)"></div>
+                                <div class="card__background" style="background-image: url(Images/Project/Calculator.webp)"></div>
                                 <div class="card__content">
                                     <p class="card__category">Web</p>
                                 </div>                            
                                 <h3 class="card__heading one__line">Calculator</h3>
                             </a>
                             <a class="card web" href="https://codepen.io/MR_SANDBERG/pen/dyNbPxO" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="200">
-                                <div class="card__background" style="background-image: url(Images/Project/FilterFun.jpg)"></div>
+                                <div class="card__background" style="background-image: url(Images/Project/FilterFun.webp)"></div>
                                 <div class="card__content">
                                     <p class="card__category">Web</p>
                                 </div>           
@@ -732,7 +703,7 @@
                             <!--                          Software Project                       -->
                             <!--*****************************************************************-->
                             <a class="card software" href="https://github.com/R-bjorn/Store-Inventory-System" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="300">
-                                <div class="card__background" style="background-image: url(Images/Project/StoreInventorySystem.jpg)"></div>
+                                <div class="card__background" style="background-image: url(Images/Project/StoreInventorySystem.webp)"></div>
                                 <div class="card__content">
                                     <p class="card__category">Software</p>
                                 </div>    
@@ -740,7 +711,7 @@
                                 
                             </a>
                             <a class="card software" href="https://github.com/R-bjorn/Flight-Tracking-System" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-offset="400">
-                                <div class="card__background" style="background-image: url(Images/Project/FlightTrackingSystem.jpg)"></div>
+                                <div class="card__background" style="background-image: url(Images/Project/FlightTrackingSystem.webp)"></div>
                                 <div class="card__content">
                                     <p class="card__category">Software</p>
                                 </div>                            
@@ -770,7 +741,7 @@
                             <!-- <div class="margin" style="height: 500px;"></div> -->
                             <a href="#" onclick="scrollto('#home'); return false;" class="photo">
                                 <h1>Ravi Trivedi</h1>
-                                <img src="Images/R-Bjorn.jpeg" />
+                                <img src="Images/R-Bjorn.webp" />
                                 <div class="glow-wrap">
                                 <i class="glow"></i>
                                 </div>
@@ -962,8 +933,7 @@
                     </section>
                 </div>
             </section><!-- End About Section -->
-            <!-- Contact -->
-            
+            <!-- Contact -->         
             <section class="contact" id="contact">
                 <h2 style="margin-top: 150px;" data-aos="fade-up">
                     Contact Me
@@ -1153,7 +1123,7 @@
                         
                     </div>
                     <div>
-                        <a href="#"><img src="Images/logo.png" alt="RBjorn's Logo" width="80px"></a>
+                        <a href="#"><img  width="80px" height="80px" src="Images/logo.webp" alt="RBjorn's Logo"></a>
                         <p>©2021 RBjorn</p>
                     </div>
                 </div>
@@ -1177,7 +1147,6 @@
 
         <!-- JS Files -->
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
         <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
         <!-- JavaScript -->
         <script src="JS/script.js"></script>
