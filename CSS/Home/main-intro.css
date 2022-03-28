@@ -20,6 +20,7 @@
   transition: all 0.3s ease;
   z-index: 3;
 }
+
 .home h1:hover {
   transform: translate3d(0, -10px, 22px);
   color: #ff0266;
@@ -41,18 +42,9 @@
 .home a {
   text-decoration: none;
 }
-@media screen and (min-width: 800px) {
-  .home h1 {
-    font-size: 5vw;
-  }
-
-  .home h2 {
-    font-size: 3vw;
-  }
-}
 @media screen and (min-width: 360px) {
   .home h1 {
-    font-size: 8vw;
+    font-size: 15vw;
   }
 
   .home h2 {
@@ -60,17 +52,27 @@
     letter-spacing: 0.2vw;
   }
 }
+@media screen and (min-width: 800px) {
+  .home h1 {
+    font-size: 8vw;
+  }
+
+  .home h2 {
+    font-size: 3vw;
+  }
+}
+
 .home__intro {
   position: absolute;
   z-index: 2;
 }
+
 .home .background {
-  /* background image */
-  /* background-image: url("Images/Background.jpg");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
+  visibility: hidden;
+}
+
+.home .background.active {
+  visibility: visible;
   position: fixed;
   height: 100vh;
   top: 0;
@@ -80,10 +82,60 @@
   z-index: -2;
   background-color: #1e1f26;
 }
+
+/* Landscape */
+.landscape {
+  visibility: hidden;
+}
+
+.landscape.active {
+  /* display: show; */
+  visibility: visible;
+  position: fixed !important;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -2;
+}
+
+/* Snowy Background */
+.snowy__background {
+  visibility: hidden;
+}
+
+.snowy__background.active {
+  visibility: visible;
+  position: fixed !important;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -2;
+}
+
+@media only screen and (max-width: 500px) {
+  .landscape {
+    display: none;
+  }
+
+  .snowy__background {
+    display: none;
+  }
+}
+
 .home .loader span {
   color: #faebd7;
   text-shadow: 0 0 0 #faebd7;
   -webkit-animation: loading 1s ease-in-out infinite alternate;
+}
+
+@media only screen and (max-width: 500px) {
+  .home .loader span {
+    font-size: 2vh;
+  }
 }
 
 @-webkit-keyframes loading {

@@ -5,6 +5,25 @@ header ul {
   list-style: none;
 }
 
+@media only screen and (max-width: 500px) {
+  header h1.logo {
+    display: block;
+    margin: 0;
+  }
+  header h1.logo img {
+    width: 70px;
+  }
+  header nav ul .smallHide {
+    display: none;
+  }
+  header nav ul {
+    display: flex;
+  }
+  header nav li {
+    display: inline;
+  }
+}
+
 nav {
   /* margin-top: 40px; */
   padding: 24px;
@@ -86,6 +105,16 @@ nav {
 /* ================================= 
     Media Queries
   ==================================== */
+
+@media (min-width: 350px) {
+  .main {
+    max-width: min-content;
+  }
+  .header h1 {
+    top: 0;
+    left: 0;
+  }
+}
 
 @media (min-width: 769px) {
   .header,

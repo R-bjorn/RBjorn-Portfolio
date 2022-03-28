@@ -81,25 +81,37 @@ function onElementHeightChange(elm, callback) {
   const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
   }
+  let particlebg = document.getElementById("main__background");
   let landscape = document.getElementById("landscape__background");
   let snowybg = document.getElementById("snowy__background");
   if(landscape != null){
     const toggleBackground = () => {
-      if(window.scrollY < 900){
-        if(landscape.classList.contains('active')){
+      if(window.scrollY > 0 && window.scrollY < 900){
+        particlebg.classList.add("active");
+        if(landscape.classList.contains('active')){          
           landscape.classList.remove('active')
         }        
-      }
-      if(window.scrollY > 900){
-        landscape.classList.add('active')
-      }
-      if(window.scrollY < 4700){
         if(snowybg.classList.contains('active')){
-          snowybg.classList.remove('active')
-        }        
+          snowybg.classList.remove('active');
+        }
       }
-      if(window.scrollY > 4700){
-        snowybg.classList.add('active')
+      else if(window.scrollY > 900 && window.scrollY < 4700){
+        landscape.classList.add('active')
+        if(particlebg.classList.contains('active')){
+          particlebg.classList.remove("active");
+        }        
+        if(snowybg.classList.contains('active')){
+          snowybg.classList.remove('active');
+        }
+      }
+      else if(window.scrollY > 4700){
+        snowybg.classList.add('active')    
+        if(particlebg.classList.contains('active')){
+          particlebg.classList.remove("active");
+        }
+        if(landscape.classList.contains('active')){          
+          landscape.classList.remove('active')
+        }    
       }
     }
     window.addEventListener('load', toggleBackground)
@@ -158,7 +170,7 @@ function onElementHeightChange(elm, callback) {
       prevDirection = direction;
       scrollCount = 0;
     }
-    else if (direction === 1 && scrollCount > 5) {
+    else if (direction === 1 && scrollCount > 15) {
       header.classList.add('sticky');
       prevDirection = direction;
       scrollCount = 0;
@@ -253,6 +265,7 @@ function showCatagory(category){
 
   if(gameProjects != null && webProjects != null && softwareProjects != null){
     if(category == "game"){
+      console.log("showing games")
       for(var i = 0; i < gameProjects.length; i++)
       {
         if(gameProjects[i].classList.contains("hide")){
@@ -273,6 +286,7 @@ function showCatagory(category){
       }
     }
     else if(category == "web"){
+      console.log("showing web")
       for(var i = 0; i < gameProjects.length; i++)
       {
         if(!gameProjects[i].classList.contains("hide")){
@@ -293,6 +307,7 @@ function showCatagory(category){
       }
     }
     else if(category == "software"){
+      console.log("showing software")
       for(var i = 0; i < gameProjects.length; i++)
       {
         if(!gameProjects[i].classList.contains("hide")){

@@ -20,7 +20,7 @@ body .footer .bubbles {
   height: 1rem;
   background: var(--footer-background);
   -webkit-filter: url("#blob");
-          filter: url("#blob");
+  filter: url("#blob");
 }
 
 body .footer .bubbles .bubble {
@@ -28,10 +28,13 @@ body .footer .bubbles .bubble {
   left: var(--position, 50%);
   background: var(--footer-background);
   border-radius: 100%;
-  -webkit-animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
-          animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+  -webkit-animation: bubble-size var(--time, 4s) ease-in infinite
+      var(--delay, 0s),
+    bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+  animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
+    bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
   -webkit-transform: translate(-50%, 100%);
-          transform: translate(-50%, 100%);
+  transform: translate(-50%, 100%);
 }
 
 body .footer .content {
@@ -39,16 +42,20 @@ body .footer .content {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr auto;
-      grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr auto;
   grid-gap: 4rem;
   padding: 2rem;
   background: var(--footer-background);
 }
 
-body .footer .content a,
-body .footer .content p {
+.content a,
+.content p {
   color: #f5f7fa;
   text-decoration: none;
+}
+.content a:hover {
+  color: brown;
+  text-decoration: underline;
 }
 
 body .footer .content b {
@@ -66,11 +73,11 @@ body .footer .content > div {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 body .footer .content > div > div {
@@ -83,8 +90,8 @@ body .footer .content > div > div > * {
 
 body .footer .content > div .image {
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
   width: 4rem;
   height: 4rem;
   margin: 0.25rem 0;

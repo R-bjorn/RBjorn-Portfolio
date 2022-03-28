@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "ROBOTO", sans-serif;
+  font-family: "ROBOTO", sans-serif !important;
   overflow-x: hidden;
   left: 0;
   top: 0;
@@ -38,14 +38,29 @@ body {
   opacity: 1;
 }
 
+@media only screen and (max-width: 500px) {
+  .back-to-top {
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+  }
+}
+
 /*--------------------------------------------------------------
 # Console Section
 --------------------------------------------------------------*/
+
 .console {
   padding: 2em 2em;
   /* background-color: #cac3bb; */
   background-color: white;
   text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+  .console {
+    display: none;
+  }
 }
 
 .console h3 {
@@ -76,6 +91,16 @@ body {
   text-shadow: 2px 2px #ff0266;
   z-index: 3;
 }
+
+@media only screen and (max-width: 600px) {
+  .console h2,
+  .projects h2,
+  .about h2,
+  .contact h2 {
+    font-size: 5vh;
+  }
+}
+
 .contact h2 {
   color: white;
   /* text-shadow: 2px 2px #ff0266; */
@@ -211,43 +236,16 @@ body {
   /* --animation: terminal-bar; */
 }
 
-/* Landscape */
-.landscape {
-  visibility: hidden;
-}
-
-.landscape.active {
-  /* display: show; */
-  visibility: visible;
-  position: fixed !important;
-  height: 100vh;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -2;
-}
-
-/* Snowy Background */
-.snowy__background {
-  visibility: hidden;
-}
-
-.snowy__background.active {
-  visibility: visible;
-  position: fixed !important;
-  height: 100vh;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -2;
-}
-
 /* Projects */
 .projects {
   padding: 2em 2em;
   text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .projects {
+    background-color: white;
+  }
 }
 
 .shine {
@@ -360,6 +358,22 @@ body {
   margin-top: -10px;
 }
 
+@media only screen and (max-width: 500px) {
+  .about .photo {
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+  }
+
+  .about__info-background {
+    display: none;
+  }
+
+  .about .about__info-title {
+    display: none;
+  }
+}
+
 .about .photo:hover img {
   box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.5);
 }
@@ -408,7 +422,7 @@ body {
 }
 
 .about__info-background2 {
-  margin-top: 170px;
+  margin-top: 120px;
   margin-left: 100px;
   position: absolute;
   background-color: #cac3bb;
@@ -420,6 +434,32 @@ body {
   /* z-index: 2; */
 }
 
+@media only screen and (max-width: 500px) {
+  .about__info-background2 {
+    display: none;
+  }
+}
+
+.about__info-background2 a {
+  color: #ff0266;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.about__info-background2 p {
+  text-align: justify;
+}
+
+.about__info-background2 a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 500px) {
+  .mobile__about__info .row {
+    visibility: visible !important;
+  }
+}
+
 .about__info-title {
   position: relative;
   /* background-color: aliceblue; */
@@ -427,7 +467,7 @@ body {
   height: 50px;
 }
 .about__info-title h3 {
-  margin-top: 0.5rem;
+  margin-top: 3rem;
   display: inline;
 }
 
@@ -556,7 +596,13 @@ body {
   justify-content: center;
 }
 
-.about #skills .box .title {
+@media only screen and (max-width: 500px) {
+  .about #skills {
+    display: none;
+  }
+}
+
+.about .box .title {
   transition: all 0.4s;
   color: white;
   padding: 50px;
@@ -587,6 +633,12 @@ body {
   padding: 2em 2em;
   text-align: center;
   /* background-color: white; */
+}
+
+@media only screen and (max-width: 500px) {
+  .contact {
+    display: none;
+  }
 }
 
 input[type="text"],
@@ -635,10 +687,12 @@ input[type="submit"] {
   border: 1px solid rgb(235, 235, 235);
   border-radius: 20px;
   box-sizing: border-box;
+  transition: all 1s;
 }
 
 input[type="submit"]:hover {
-  background-color: #111;
+  background-color: #ff0266;
+  color: white;
 }
 
 .container {
@@ -646,4 +700,21 @@ input[type="submit"]:hover {
 
   /* background-color: #f2f2f2; */
   padding: 20px;
+}
+
+.smallFooter {
+  display: none;
+}
+
+@media only screen and (max-width: 500px) {
+  #mainFooter {
+    display: none;
+  }
+  .smallFooter {
+    display: relative;
+    background-color: #30353a;
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+  }
 }

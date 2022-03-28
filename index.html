@@ -54,6 +54,12 @@
             .hide{
                 display: none;
             }
+
+            @media only screen and (max-width: 600px) {
+                .sticky {
+                    position: absolute;
+                }
+            }
             
         </style>
     </head>
@@ -61,23 +67,24 @@
         <!-- <div ></div> -->
                     
         <!-- Main Content  -->
+ 
         <main id="main">
             <!-- Header -->
             <header class="header sticky" id="myHeader">
                 <h1 class="logo"><a href="#"><img src="Images/logo.png" alt="RBjorn's Logo" width="100px"></a></h1>
-
+        
                 <nav id="nav-1">
                     <ul class="main-nav">
                         <!-- <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Portfolio</a></li>
                         <li><a href="#">Contact</a></li> -->
-                        <li><a class="link-1" onclick="scrollto('#home'); return false; " ; href="#">Home</a></li>
-                        <li><a class="link-1" onclick="scrollto('#console'); return false; "href="#console">Console</a></li>
-                        <li><a class="link-1" onclick="scrollto('#projects'); return false; "href="#projects">Projects</a></li>
-                        <li><a class="link-1" onclick="scrollto('#about'); return false; "href="#about">About</a></li>
-                        <li><a class="link-1" href="/Resume/Web Development Resume.pdf">Resume</a></li>
-                        <li><a class="link-1" onclick="scrollto('#contact'); return false; "href="#contact">Contact</a></li>
+                        <li><a class="link-1 smallHide" onclick="scrollto('#home'); return false; " ; href="#">Home</a></li>
+                        <li><a class="link-1 smallHide" onclick="scrollto('#console'); return false; "href="#console">Console</a></li>
+                        <li><a class="link-1 smallHide" onclick="scrollto('#projects'); return false; "href="#projects">Projects</a></li>
+                        <li><a class="link-1 smallHide" onclick="scrollto('#about'); return false; "href="#about">About</a></li>
+                        <li><a class="link-1 smallHide" href="/Resume/Web Development Resume.pdf">Resume</a></li>
+                        <li><a class="link-1 smallHide" onclick="scrollto('#contact'); return false; "href="#contact">Contact</a></li>
                     </ul> 
                 </nav>            
             </header> 
@@ -110,7 +117,7 @@
                     </h3>
                 </div>
                 <!-- Background -->
-                <canvas class="background"></canvas>
+                <canvas class="background" id="main__background"></canvas>
                 <!-- Landscape background -->
                 <div class="landscape" id="landscape__background">
                     <div class="mountain"></div>
@@ -362,7 +369,7 @@
             </section><!-- End Main Intro Section -->
             <!-- Console -->
             <section id="console" class="console">
-                <div class="container">
+                <div class="container ">
                     <div class="section-title" style="padding:2rem 0" data-aos="fade-up">
                         <h2>
                             $ whoami
@@ -620,7 +627,7 @@
             </section> <!-- End Console Section -->
             <!-- Project -->
             <section id="projects" class="projects">
-
+        
             <div class="container">
                 <div class="section-title" style="padding:2rem 0" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <h2>
@@ -765,22 +772,24 @@
                         </section>
                 </div>
             </div>
-
+        
             </section><!-- End Project Section -->
             <!-- About -->
             <section class="about" id="about">
-                <div class="section-title" style="padding:2rem 0" data-aos="zoom-in" data-aos-offset="200">
-                    <h2>
-                        About Me!
-                    </h2>
-                    <!-- <p>I'm <span class="typed" data-typed-items="Designer &#246;, Developer &#60; ? &#62;, Freelancer &#3647;, Gamer &#926;, Wizard &#8224;"></span></p> -->
-                </div>
                 <div class="container">
+                    <div class="row">
+                        <div class="section-title" style="padding:2rem 0" data-aos="zoom-in" data-aos-offset="200">
+                            <h2>
+                                About Me!
+                            </h2>
+                            <!-- <p>I'm <span class="typed" data-typed-items="Designer &#246;, Developer &#60; ? &#62;, Freelancer &#3647;, Gamer &#926;, Wizard &#8224;"></span></p> -->
+                        </div>
+                    </div>
                     <!-- profile -->
                     <div class="row">
                         <!-- Image -->
                         <div class="col-lg-4 about__intro" data-aos="fade-right" data-aos-offset="300">
-                            <div class="margin" style="height: 500px;"></div>
+                            <!-- <div class="margin" style="height: 500px;"></div> -->
                             <a href="#" onclick="scrollto('#home'); return false;" class="photo">
                                 <h1>Ravi Trivedi</h1>
                                 <img src="Images/R-Bjorn.jpeg" />
@@ -790,25 +799,30 @@
                             </a>
                         </div>
                         <!-- Information -->
-                        <div class="col-lg-8" style="height: 600px;">
+                        <div class="col-lg-8" style="height: 600px; box-sizing: border-box;">
                             <div class="about__info-background" data-aos="fade-left" data-aos-duration="500"></div>
                             <div class="about__info-background2" data-aos="fade-left" data-aos-duration="1000">
-                                <div class="row">
+                                <div class="row" style="text-align: left;">
                                     <p data-aos="zoom-in" data-aos-offset="200">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum temporibus, quo perferendis error nam eveniet assumenda, ab, iusto corrupti ipsa facilis dicta iste laboriosam fugit quia maxime illo qui cupiditate!
+                                        Hi! I am <a href="#home" target="blank">Ravi Trivedi</a>. I'm an independent creative developer, 
+                                        currently a 3rd year <a href="https://css.uwindsor.ca/">Computer Science</a> student 
+                                        at <a href="https://www.uwindsor.ca/" target="blank">University of Windsor</a>, specializing in <strong>Game Development</strong>.
                                     </p>
                                     <p data-aos="zoom-in" data-aos-offset="230">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum temporibus, quo perferendis error nam eveniet assumenda, ab, iusto corrupti ipsa facilis dicta iste laboriosam fugit quia maxime illo qui cupiditate!
+                                        Honoured by Dean (<a href="/Resume/HonourRoll.pdf" target="blank">Dean's Honour List</a>) and Lead by Experts specializing in Web Development. 
+                                        Experienced with all stages of development cycle for dynamic web projects and <strong>agile software development</strong>. 
+                                        Skilled project manager, team leader, and analytical problem-solver with top-notch organizational, scheduling, and code verification skills. 
                                     </p>
                                     <p data-aos="zoom-in" data-aos-offset="250">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum temporibus, quo perferendis error nam eveniet assumenda, ab, iusto corrupti ipsa facilis dicta iste laboriosam fugit quia maxime illo qui cupiditate!
+                                        I have spent the last five years working on <strong>Web Designing</strong> projects, 
+                                        developed various <strong>Game Projects</strong> & reshaped several ideas into <strong>Software System</strong>, 
+                                        comfortable working within large-scale collaborations such as <a href="https://github.com/R-bjorn" target="_blank" rel="noopener n oreferrer">GitHub</a>  or on individually-developed assets.
                                     </p>
                                 </div>
                             </div>
-                            <div style="height: 50px;"></div>
                             <div class="row about__info-title">
                                 
-                                <h3 class="span loader" data-aos="fade-left" data-aos-duration="500" data-aos-offset="400">
+                                <h3 class="span loader" data-aos="fade-left" data-aos-duration="500">
                                     <span class='m'>H</span>
                                     <span class='m'>E</span>
                                     <span class='m'>L</span>
@@ -843,8 +857,17 @@
                                     <span class='m'>E</span>
                                     </h3>
                             </div>
-                            <div class="row">
-
+                            <div class="mobile__about__info">
+                                <div class="container">
+                                    <div class="row" style="text-align: justify; margin-top:20px; font-size: 2vh; padding: 20px; visibility: hidden;">
+                                        Hi! I am Ravi Trivedi. I'm an independent creative developer, 
+                                        currently a 3rd year Computer Science student 
+                                        at University of Windsor, specializing in Game Development. <br><br>
+                                        Honoured by Dean and Lead by Experts specializing in Web Development. 
+                                        Experienced with all stages of development cycle for dynamic web projects and agile software development. 
+                                        Skilled project manager, team leader, and analytical problem-solver with top-notch organizational, scheduling, and code verification skills. 
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -943,15 +966,17 @@
                             Systems I Use!
                         </h3>
                         <div style="height:90px;"></div>
-                        <div class="row boxes">
-                            <div class="col-lg-5" data-aos="fade-left">
-                                <div class='box'>
-                                    <div class='title windows'>Windows</div>
+                        <div class="container">
+                            <div class="row boxes">
+                                <div class="col-lg-5 col-5" data-aos="fade-left">
+                                    <div class='box'>
+                                        <div class='title windows'>Windows</div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-5" data-aos="fade-right" >
-                                <div class='box'>
-                                    <div class='title linux'>&nbsp;Linux&nbsp;</div>
+                                <div class="col-lg-5 col-5" data-aos="fade-right" >
+                                    <div class='box'>
+                                        <div class='title linux'>&nbsp;Linux&nbsp;</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -977,7 +1002,7 @@
                                 <input type="text" id="lname" name="lastname" placeholder="Enter your last name..">
                             </div>
                         </div>
-
+        
                         <div class="row" data-aos="fade-up">
                             <div class="col">
                                 <label for="country">Email</label>
@@ -1009,11 +1034,10 @@
                 <div class="margin" style="height: 20px;"></div>
             </section> <!-- End Contact Section -->
         </main>
-    
         <!-- Footer -->
         <footer>
             <!-- <div class="margin"></div> -->
-            <div class="footer">
+            <div class="footer" id="mainFooter">
                 <div class="bubbles">
                     <div class="bubble" style="--size:3.227859741622317rem; --distance:6.59348204439324rem; --position:3.197834702597607%; --time:3.786640124741186s; --delay:-3.0519169429382536s;"></div>
                     <div class="bubble" style="--size:4.789333255160948rem; --distance:7.457544999962285rem; --position:36.44470951019624%; --time:3.762931552351019s; --delay:-2.344266576470789s;"></div>
@@ -1146,24 +1170,19 @@
                 </div>
                 <div class="content">
                     <div>
-                        <!-- <div><b>Eldew</b><a href="#">Secuce</a><a href="#">Drupand</a><a href="#">Oceash</a><a href="#">Ugefe</a><a href="#">Babed</a></div>
-                        <div><b>Spotha</b><a href="#">Miskasa</a><a href="#">Agithe</a><a href="#">Scesha</a><a href="#">Lulle</a></div>
-                        <div><b>Chashakib</b><a href="#">Chogauw</a><a href="#">Phachuled</a><a href="#">Tiebeft</a><a href="#">Ocid</a><a href="#">Izom</a><a href="#">Ort</a></div>
-                        <div><b>Athod</b><a href="#">Pamuz</a><a href="#">Vapert</a><a href="#">Neesk</a><a href="#">Omemanen</a></div> -->
+                        <div><b>Reach out to me : </b><a href="mailto:ravidtrivedi111@gmail.com" target="_blank">ravidtrivedi111@gmail.com</a></div>
+                        <div><b>Social Media : </b><a href="https://www.linkedin.com/in/ravitrivedi07/" target="_blank">/LinkedIn</a><a href="https://github.com/R-bjorn" target="_blank"  >/GitHub</a></div>
+                        
                     </div>
-                    <div><a class="image" href="https://codepen.io/z-" target="_blank" style="background-image: url(&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/happy.svg&quot;)"></a>
+                    <div>
+                        <a href="#"><img src="Images/logo.png" alt="RBjorn's Logo" width="80px"></a>
                         <p>©2021 RBjorn</p>
                     </div>
                 </div>
-            </div><svg style="position:fixed; top:100vh">
-                <defs>
-                    <filter id="blob">
-                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
-                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="blob"></feColorMatrix>
-                        <feComposite in="SourceGraphic" in2="blob" operator="atop"></feComposite>
-                    </filter>
-                </defs>
-            </svg>
+            </div>
+            <div class="smallFooter">
+                <p>©2021 RBjorn</p>          
+            </div>
         </footer>
     
         <a href="#" class="back-to-top d-flex align-items-center justify-content-center" onclick="scrollto('#home'); return false" style="text-align: center; vertical-align:bottom; text-decoration: none;" >
