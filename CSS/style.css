@@ -619,7 +619,8 @@ body {
 }
 
 .about #skills .box .linux {
-  background: no-repeat center/300% url("../Images/linux.webp");
+  background: no-repeat center/300% url("https://i.ibb.co/JpGCHz2/linux.webp");
+  /* <a href="https://ibb.co/096QrfZ"><img src="" alt="linux" border="0"></a> */
 }
 
 .about #skills .box .title:hover {
@@ -645,32 +646,34 @@ input[type="text"],
 textarea {
   width: 100%;
   padding: 20px;
-  border: 1px solid rgb(235, 235, 235);
+  border: 3px solid rgb(0, 0, 0);
   border-radius: 40px;
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.2);
+  color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.714);
 }
 
 input[type="text"]:focus,
 textarea:focus {
   width: 100%;
   padding: 20px;
-  color: white;
-  border: 1px solid rgb(235, 235, 235);
+  color: rgb(255, 255, 255);
+  border: 3px solid rgb(255, 255, 255);
   border-radius: 40px;
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgb(0, 0, 0);
 }
 
 label {
-  color: whitesmoke;
+  color: black;
+  font-weight: 400;
+  text-shadow: 1px 1px #ff0266;
   padding: 10px;
   font-size: 2rem;
 }

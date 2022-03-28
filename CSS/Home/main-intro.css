@@ -106,6 +106,7 @@
 }
 
 .snowy__background.active {
+  background: url("../../Images/Snowy_background.webp");
   visibility: visible;
   position: fixed !important;
   height: 100vh;
