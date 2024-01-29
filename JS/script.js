@@ -353,3 +353,21 @@ function createPie(dataElement, pieElement) {
 createPie(".pieID.legend", ".pieID.pie");
 createPie(".pieID2.legend", ".pieID2.pie");
 createPie(".pieID3.legend", ".pieID3.pie");
+
+window.addEventListener('scroll', function() {
+  var headerContainer = document.querySelector('.header-container ');
+  var scrollDistance = window.pageYOffset;
+
+  if (scrollDistance > 100) { // Change the threshold as needed
+    headerContainer.classList.add('sticky');
+  } else {
+    headerContainer.classList.remove('sticky');
+  }
+});
+
+var logoImage = document.querySelector('.logo img');
+var headerContainer = document.querySelector('.header-container ');
+
+logoImage.addEventListener('click', function() {
+  headerContainer.classList.toggle('sticky');
+});

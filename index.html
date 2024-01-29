@@ -45,19 +45,45 @@
                 height: 700px;
                 /* background-color: white; */
             }
-            .sticky {
-                /* transition: all 0.4s; */
-                position: fixed;
+            .header-container {
+                position: fixed; /* Fix the header position */
                 top: 0;
+                right: 0;
                 width: 100%;
-                z-index: 1000;
+                height: 60px; /* Adjust the height as needed */
+                /* background-color: #ffffff; */
+                z-index: 9999; /* Ensure the header appears in front of other content */
+                transition: right 0.5s; /* Add transition effect */
             }
+
+            .header-container.sticky {
+                right: calc(100% - 60px); /* Move the header to the left */
+            }
+            .header-container.sticky header{
+                background-color: rgba(255, 255, 255, 0);
+                box-shadow: none;
+            }
+            .header-container.sticky .logo {
+                left: 100%;
+            }
+            .header-container.sticky .logo a{
+                background-color: black;
+                padding: 10px;
+                border-radius: 15px;
+            }
+            .header-container.sticky .logo a img{
+                width: 100%;
+                transform: rotate(360deg);
+            }
+
+            
+
             .hide{
                 display: none;
             }
 
             @media only screen and (max-width: 600px) {
-                .sticky {
+                .header-container {
                     position: absolute;
                 }
             }
@@ -71,24 +97,29 @@
  
         <main id="main">
             <!-- Header -->
-            <header class="header sticky" id="myHeader">
-                <h1 class="logo"><a href="#"><img width="112px" height="100px" src="https://i.ibb.co/Rvf87pf/logo.png" alt="RBjorn's Logo"></a></h1>
-        
-                <nav id="nav-1">
-                    <ul class="main-nav">
-                        <!-- <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Contact</a></li> -->
-                        <li><a class="link-1 smallHide" onclick="scrollto('#home'); return false; " ; href="#">Home</a></li>
-                        <li><a class="link-1 smallHide" onclick="scrollto('#console'); return false; "href="#console">Console</a></li>
-                        <li><a class="link-1 smallHide" onclick="scrollto('#projects'); return false; "href="#projects">Projects</a></li>
-                        <li><a class="link-1 smallHide" onclick="scrollto('#about'); return false; "href="#about">About</a></li>
-                        <li><a class="link-1 smallHide" href="/Resume/Web Development Resume.pdf">Resume</a></li>
-                        <li><a class="link-1 smallHide" onclick="scrollto('#contact'); return false; "href="#contact">Contact</a></li>
-                    </ul> 
-                </nav>            
-            </header> 
+            <div class="header-container">
+                <header class="header" id="myHeader">
+                    <h1 class="logo"><a><img class="" width="60px" height="auto" src="https://i.ibb.co/Rvf87pf/logo.png" alt="RBjorn's Logo" ></a></h1>
+                    <!-- style="top: 35%; left: 3%;" -->
+                    <div class="menu_open">
+                        <nav id="nav-1">
+                            <ul class="main-nav">
+                                <!-- <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Portfolio</a></li>
+                                <li><a href="#">Contact</a></li> -->
+                                <li><a class="link-1 smallHide" onclick="scrollto('#home'); return false; " ; href="#">Home</a></li>
+                                <li><a class="link-1 smallHide" onclick="scrollto('#console'); return false; "href="#console">Console</a></li>
+                                <li><a class="link-1 smallHide" onclick="scrollto('#projects'); return false; "href="#projects">Projects</a></li>
+                                <li><a class="link-1 smallHide" onclick="scrollto('#about'); return false; "href="#about">About</a></li>
+                                <li><a class="link-1 smallHide" href="/Resume/Web Development Resume.pdf">Resume</a></li>
+                                <li><a class="link-1 smallHide" onclick="scrollto('#contact'); return false; "href="#contact">Contact</a></li>
+                            </ul> 
+                        </nav>   
+                    </div>         
+                </header> 
+            </div>
+            
             <!-- Main Intro -->
             <section class="home" id="home">
                 <div class="home__intro">
